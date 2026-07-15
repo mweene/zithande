@@ -1,3 +1,27 @@
+.primary {
+    background-color: #141b27;
+    color: #fff;
+}
+
+h1,h2,h3 {
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+main {
+    background-color: #eef7dc;
+}
+
+.card {
+    margin: 1rem 0;
+}
+
+body {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 nav li {
     transform: scale(1);
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -16,4 +40,26 @@ nav li span {
     font-size: 2rem;
     font-weight: 500;
     width: 100%;
+}
+
+.sectors {
+    overflow-x: hidden;
+}
+
+.sectors .slider {
+    display: flex;
+    width: fit-content;
+    animation: scroll 35s linear infinite;
+}
+
+.sectors .slider .card {
+    height: 50px;
+    width: 50px;
+    flex-shrink: 0;
+}
+
+
+@keyframes scroll {
+    from {transform: translateX(0);}
+    to {transform: translateX(-50%);}
 }

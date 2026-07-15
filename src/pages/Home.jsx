@@ -1,63 +1,135 @@
+import Button from "../components/Button";
+import { ChevronRight } from "lucide-react";
+import heroImage from "../assets/hero.png";
+
 export default function Home() {
+    const sectorCards = [1,2,3,4,5,6,7,8,9,10];
+    const divisionsCards = [
+        'General supply', 'Branding & Coperate identity',
+        'Food supply & Catering', 'Busines support services'
+    ];
     return (
         <section className="home">
-            <div className="p-4">
-                <p className="tagline text-sm">
-                    Zambian owned Female led Est.2011
-                </p>
-                <h1 className="text-[2rem] font-bold">
-                    A supplier you don't have to chase
-                </h1>
-                <p className="my-4 text-slate-600">
-                    Dependable procurement, supply chain, branding and business
-                    support for institutions across zambia
-                </p>
+            <div className="wrapper">
+                <div className="text">
+                    <p className="tagline">
+                        Zambian owned Female led Est.2011
+                    </p>
+                    <h1 className="">
+                        Dependable supply, delivered on institutional terms
+                    </h1>
+                    <p className="">
+                        Dependable procurement, supply chain, branding and business
+                        support for institutions across zambia
+                    </p>
 
-                <div className="ctas grid">
-                    <button>request a qoute</button>
-                    <button>view our services</button>
+                    <div className="ctas grid gap-3">
+                        <Button type={'primary'} styles={''}>
+                            Request a qoute
+                            <ChevronRight size={20} />
+                        </Button>
+                        <Button>View our services</Button>
+                    </div>
                 </div>
-                <div className="hero-image"></div>
+                <div className="hero-image">
+                    <img src={heroImage} alt="hero image" />
+                </div>
+            </div>
+
+            <div className="sectors">
+                <h2>Sectors we serve</h2>
+                <div className="cards slider">
+                    {sectorCards.map((c, i) => (
+                        <div className="card" key={i}>{c}</div>
+                    ))}
+                    {sectorCards.map((c, i) => (
+                        <div className="card" key={i}>{c}</div>
+                    ))}
+                </div>
             </div>
 
             <div className="value-pillars">
-                <h2>The gap between a good tender and a good supplier</h2>
+                <h2>What institutional buyers require from a supplier</h2>
                 <p>
-                    institutions need suppliers who are reliable, responsive,
-                    complaint and commercially intelligent -- thats the gap we
-                    close.
+                    Reliability, responsiveness, compliance	and
+                    commercial judgement. the standard we hold
+                    ourselves to.
                 </p>
                 <div className="cards">
                     <div className="card">
-                        fast, dependable sourcing, timely delivery, branding &
-                        visibilty, scalable contracts
+                        <div className="text">
+                            <h3>Fast dependable sourcing</h3>
+                            <p>We source smartly and negotiate to protect your budget</p>
+                        </div>
+                        <img src="-" alt="card image"/>
+                    </div>
+                    <div className="card">
+                        <div className="text">
+                            <h3>Timely delivery</h3>
+                            <p>We value deadlines and understand operational urgency</p>
+                        </div>
+                        <img src="-" alt="card image"/>
+                    </div>
+                    <div className="card">
+                        <div className="text">
+                            <h3>Branding & Visibilty</h3>
+                            <p>Uniforms, signage and corporate identity, done in-house</p>
+                        </div>
+                        <img src="-" alt="card image"/>
+                    </div>
+                    <div className="card">
+                        <div className="text">
+                            <h3>Scalable contracts</h3>
+                            <p>From	one-off	orders to recurring, long-term agreements</p>
+                        </div>
+                        <img src="-" alt="card image"/>
                     </div>
                 </div>
             </div>
 
-            <div className="why-choose-us">
-                <h2>we treat your dead line like our own</h2>
+            <div className="track-record">
+                <h2>A track record built on consistency</h2>
                 <p>
-                    Relationship driven, not transactional -- built for repeat
-                    business, not one-off supply.
+                    We are relationship	driven,	not	transactional
+                    structured for long-term supply agreements, not one-off orders
                 </p>
 
                 <div className="cards">
                     <div className="cards">
-                        trusted delivery-procurment intelligence - local strngth
-                        national reach
+                        <h3>Trusted delivery</h3>
+                        <p>We understand operational urgency and treat deadlines as commitments</p>
+                    </div>
+                    <div className="cards">
+                        <h3>Procurement	intelligence</h3>
+                        <p>Smart sourcing and effective negotiation that optimizes value</p>
+                    </div>
+                    <div className="cards">
+                        <h3>Local strength, national reach</h3>
+                        <p>Proudly Zambian, and strategically positioned to scale regionally</p>
                     </div>
                 </div>
-                <a>meet our leadership</a>
+                <a href="">meet the leadership</a>
+            </div>
+
+            <div className="four-divisions">
+                <h2>Four divisions, one supplier</h2>
+
+                <div className="cards">
+                    {divisionsCards.map((d, i) => (
+                        <div className="card" key={i}>
+                            <h3>{d}</h3>
+                        </div>
+                    ))}
+                </div>
             </div>
 
             <div className="compliance">
-                <h2>Registered, cleared, accountable</h2>
-            </div>
-
-            <div className="closing-ctas">
-                <h2>your next order doesnt have to be a gumble</h2>
-                <button>get in touch</button>
+                <h3>Registred, Cleared, Accountable</h3>
+                <div className="badges">
+                    <div className="badge">zra</div>
+                    <div className="badge">license</div>
+                    <div className="badge">council</div>
+                </div>
             </div>
         </section>
     );
