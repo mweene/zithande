@@ -17,15 +17,16 @@ export default function About() {
         },
     ]
   return (
-    <section className="">
-        <div className="about-hero">
+    <section className="about-page text-center py-16">
+        <div className="about-hero grid place-items-center">
             <p className="tagline">About us</p>
-            <h1>A Zambian, female led enterprise built on institutional trust</h1>
-            <p>Built on a legacy of integrity, resilience and service excellence evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients</p>
+            <h1 className="md:w-[23ch]">A Zambian, women-led enterprise built on trust</h1>
+            <p className="md:w-[55ch] mt-4">Built on a legacy of integrity, resilience and service excellence evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients</p>
         </div>
 
-        <div className="vision">
-            <div className="columns">
+        <div className="vision flex gap-8 mt-20 bg-white md:p-15 ">
+            <h2>Our Vision & Mission</h2>
+            <div className="columns text-left [&_.text]:border [&_.text]:p-8 [&_.text]:rounded-xl grid gap-4">
                 <div className="text">
                     <h3>Vision</h3>
                     <p>"Built on a legacy of integrity, resilience and service excellence  evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients"</p>
@@ -37,24 +38,25 @@ export default function About() {
             </div>
         </div>
 
-        <div className="values">
+        <div className="values pb-15 mt-20">
             <h2>Core values</h2>
 
-            <div className="pills">
+            <div className="pills flex gap-2 place-content-center mt-8">
                 {coreValuesPills.map((v, i) => (
-                    <div className="pill" key={i}>{v}</div>
+                    <div className="pill border rounded-full p-4 px-10" key={i}>{v}</div>
                 ))}
             </div>
         </div>
 
-        <div className="leadership">
-            <h2>leadership</h2>
+        <div className="leadership grid place-items-center bg-white py-20">
+            <h2>Leadership</h2>
+            <p className="md:w-[55ch] mt-4">Zithande Limited is committed to responsible governance, and continues to strengthen its board advisory structure, compliance framework and reporting standards.</p>
 
-            <div className="cards">
+            <div className="cards mt-8 mx-15 grid gap-4">
                 {leadership.map(leader => (
-                    <div className="card" key={leader.id}>
-                        <div className="image">
-                            <img src={leader.imageUrl} alt="" />
+                    <div className="card border grid gap-4 rounded-xl h-96" key={leader.id}>
+                        <div className="image bg-amber-200 m-2 rounded-lg">
+                            <img src={leader.imageUrl} alt="leader image" />
                         </div>
                         <div className="content">
                             <p className="role">{leader.role}</p>
@@ -64,13 +66,12 @@ export default function About() {
                     </div>
                 ))}
             </div>
-            <p>Zithande Limited is committed to responsible governance, and continues to strengthen its board advisory structure, compliance framework and reporting standards.</p>
         </div>
 
-        <div className="internship">
-            <h2>Youth empowerment through internship & seasonal work</h2>
+        <div className="internship grid place-items-center md:px-15">
+            <h2 className="md:w-[23ch]">Youth empowerment through internship & seasonal work</h2>
 
-            <div className="cards">
+            <div className="cards grid grid-cols-2">
                 <div className="card">
                     <p>
                         Practical opportunities for young people through internships and seasonal temporary employment reducing youth unemployment one placement at a time
@@ -84,7 +85,7 @@ export default function About() {
             </div>
         </div>
 
-        <div className="partnership">
+        <div className="partnership bg-white">
             <h2>Discuss a partnership with our leadership team</h2>
             <a href="">contact zithande</a>
         </div>

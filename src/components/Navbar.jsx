@@ -12,16 +12,16 @@ export default function Navbar() {
     }, [location.pathname]);
 
     return (
-        <nav className="relative bg-white border-b">
-            <div className="flex place-content-between place-items-center p-5">
+        <nav className="relative bg-white border-b border-[#dfe3d6]">
+            <div className="flex place-content-between place-items-center py-3 px-10">
                 <Link to="/">
                     <img src={Logo} alt="logo" className="h-14" />
                 </Link>
                 <button
-                    className="cursor-pointer"
+                    className="nav-menu cursor-pointer"
                     onClick={() => setIsMenuOpen((prev) => !prev)}
                 >
-                    <Menu size={25} />
+                    <Menu size={25} color="#29340b"/>
                 </button>
             </div>
             {isMenuOpen && <MobileMenu onClick={() => setIsMenuOpen(false)} />}
@@ -33,7 +33,7 @@ const MobileMenu = ({ onClick }) => {
     return (
         <div
             className={`
-              menu bg-slate-200 w-full h-dvh md:w-2/3 absolute inset-0
+              menu bg-[#eef7dc] w-full h-dvh md:w-2/3 absolute inset-0
               flex flex-col place-content-between
             `}
         >
@@ -41,7 +41,7 @@ const MobileMenu = ({ onClick }) => {
                 onClick={onClick}
                 className="self-end cursor-pointer p-5 pt-7"
             >
-                <X size={30} />
+                <X size={30} color="#455714"/>
             </button>
             <ul className="my-8 p-5 px-7 [&_li]:py-2.5">
                 <li>

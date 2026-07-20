@@ -1,25 +1,58 @@
 .primary {
-    background-color: #141b27;
-    color: #fff;
+    background-color: #29340b;
+    color: #eef7dc;
+}
+
+.tagline {
+    font-size: .72rem;
+    font-weight: 600;
+    border: 1px solid #d0f176;
+    border-radius: .4rem;
+    width: fit-content;
+    padding: .1rem .5rem;
+    margin-bottom: .5rem;
+    background-color: #eaffb2bd;
+    color: #596a2e;
 }
 
 h1,h2,h3 {
     line-height: 1.1;
     font-weight: 700;
+    color: #29340b;
+}
+
+h2 {
+    font-size: 2.25rem;
+}
+
+p {
+    font-size: 1.05rem;
+    color: #29340b;
+}
+
+button {
+    font-size: .95rem;
 }
 
 main {
     background-color: #eef7dc;
 }
 
-.card {
-    margin: 1rem 0;
+.card h3 {
+    font-size: 1.35rem;
 }
 
+
+/*
 body {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+}
+*/
+
+nav .menu {
+    z-index: 2;
 }
 
 nav li {
@@ -40,6 +73,30 @@ nav li span {
     font-size: 2rem;
     font-weight: 500;
     width: 100%;
+    color: #455714;
+}
+
+nav .nav-menu {
+    padding: .45rem;
+    background-color: #eef7dc;
+    border-radius: .25rem;
+}
+
+.home .hero {
+    padding-top: 4rem;
+}
+
+.home .hero .text {
+    padding: 1rem 1.5rem;
+}
+
+.home .hero h1 {
+    font-size: 52.5px;
+    font-weight: 800;
+}
+
+.home .hero .lead {
+    margin: 1rem 0;
 }
 
 .sectors {
@@ -48,18 +105,91 @@ nav li span {
 
 .sectors .slider {
     display: flex;
+    gap: 1rem;
     width: fit-content;
     animation: scroll 35s linear infinite;
 }
 
 .sectors .slider .card {
-    height: 50px;
-    width: 50px;
+    height: 150px;
+    width: 150px;
     flex-shrink: 0;
+    background-color: #dbe4c7;
+    border-radius: .45rem;
 }
 
+.value-pillars .cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.value-pillars .card{
+    background: 1linear-gradient(152deg, #65830b, #d4ff53);
+    background-color: #2f3b0d;
+    height: 25rem;
+    padding: 2rem 1.5rem;
+    border-radius: .75rem;
+    display: grid;
+}
+
+.value-pillars .cards h2 {
+    color: #eef7dc;
+}
+
+.value-pillars .cards img {
+    place-self: end;
+}
+
+.value-pillars .cards p {
+    margin: .5rem 0;
+    color: #f0ffcb;
+}
+
+.value-pillars .cards h3 {
+    color: #f8ffe6;
+}
+
+.four-divisions .cards {
+    display: grid;
+    margin-top: 1.5rem;
+
+}
+
+.four-divisions .cards .card {
+    padding: 2rem;
+    background-color: #e5ffa9;
+    border-radius: .75rem;
+    border: 1px solid #14190596;
+}
+
+.four-divisions .cards .card:not(:first-child) {
+    margin-top: -1rem;
+}
+
+.leadership .cards .card {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    text-align: left;
+}
 
 @keyframes scroll {
     from {transform: translateX(0);}
     to {transform: translateX(-50%);}
+}
+
+
+@media screen and (min-width: 1200px) {
+    h2 {
+        font-size: 50px;
+    }
+
+    h1 {
+        font-size: 70px !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    h1 {
+        font-size: 52px;
+    }
 }
