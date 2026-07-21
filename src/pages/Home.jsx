@@ -60,7 +60,7 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="cards md:grid md:grid-cols-4 md:mt-4">
-                    <div className="card">
+                    <div className="card bg-[#29340b]">
                         <div className="text">
                             <h3>Fast dependable sourcing</h3>
                             <p>We source smartly and negotiate to protect your budget</p>
@@ -129,7 +129,7 @@ export default function Home() {
                 <div className="cards w-4/5 place-self-center">
                     {divisionsCards.map((d, i) => (
                         <div className="card" key={i}>
-                            <h3>{d}</h3>
+                            <h3>{i+1}. {d}</h3>
                         </div>
                     ))}
                 </div>
@@ -144,8 +144,8 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="in-touch">
-                <h2>
+            <div className="in-touch bg-white grid place-content-center p-15 text-center">
+                <h2 className="md:w-[23ch]">
                     Discuss your procurement
                     requirements with our team
                 </h2>

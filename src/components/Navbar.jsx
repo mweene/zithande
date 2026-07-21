@@ -11,6 +11,18 @@ export default function Navbar() {
         setIsMenuOpen(false);
     }, [location.pathname]);
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "unset";
+        }
+
+        return () => {
+            document.body.style.overflow = "unset";
+        }
+    }, [isMenuOpen]);
+
     return (
         <nav className="relative bg-white border-b border-[#dfe3d6]">
             <div className="flex place-content-between place-items-center py-3 px-10">
@@ -24,17 +36,30 @@ export default function Navbar() {
                     <Menu size={25} color="#29340b"/>
                 </button>
             </div>
-            {isMenuOpen && <MobileMenu onClick={() => setIsMenuOpen(false)} />}
+            {isMenuOpen && (
+                <div
+                   onClick={() => setIsMenuOpen(false)}
+                   className="fixed inset-0 z-1 bg-black/30 backdrop-blur-md transition-opacity duration-300"
+                >
+                </div>
+            )}
+            {isMenuOpen && (
+                <MobileMenu
+                    onClick={() => setIsMenuOpen(false)}
+                    isOpen={isMenuOpen}
+                />
+            )}
         </nav>
     );
 }
 
-const MobileMenu = ({ onClick }) => {
+const MobileMenu = ({ onClick, isOpen }) => {
     return (
         <div
             className={`
-              menu bg-[#eef7dc] w-full h-dvh md:w-2/3 absolute inset-0
-              flex flex-col place-content-between
+              menu bg-[#eef7dc] w-full h-dvh md:w-2/5 fixed top-0 right-0
+              flex flex-col place-content-between z-40 overflow-y-scroll
+              transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}
             `}
         >
             <button

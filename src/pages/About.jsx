@@ -17,8 +17,8 @@ export default function About() {
         },
     ]
   return (
-    <section className="about-page text-center py-16">
-        <div className="about-hero grid place-items-center">
+    <section className="about-page text-center">
+        <div className="about-hero grid place-items-center py-16">
             <p className="tagline">About us</p>
             <h1 className="md:w-[23ch]">A Zambian, women-led enterprise built on trust</h1>
             <p className="md:w-[55ch] mt-4">Built on a legacy of integrity, resilience and service excellence evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients</p>
@@ -68,25 +68,25 @@ export default function About() {
             </div>
         </div>
 
-        <div className="internship grid place-items-center md:px-15">
+        <div className="internship grid place-items-center md:p-15">
             <h2 className="md:w-[23ch]">Youth empowerment through internship & seasonal work</h2>
 
-            <div className="cards grid grid-cols-2">
+            <div className="cards grid grid-cols-2 gap-4 mt-8 text-left [&_.card]:border [&_.card]:h-80 [&_.card]:rounded-xl">
                 <div className="card">
-                    <p>
+                    <p className="p-8">
                         Practical opportunities for young people through internships and seasonal temporary employment reducing youth unemployment one placement at a time
                     </p>
                 </div>
                 <div className="card">
-                    <p>
+                    <p className="p-8">
                         Internship program details  hands-on experience in procurement, administration, customer service, logistics, stock management and business operations. Seasonal roles during peak periods  deliveries, warehouse support, event logistics, packaging and promotions.
                     </p>
                 </div>
             </div>
         </div>
 
-        <div className="partnership bg-white">
-            <h2>Discuss a partnership with our leadership team</h2>
+        <div className="partnership bg-white grid place-content-center">
+            <h2 className="md:w-[23ch]">Discuss a partnership with our leadership team</h2>
             <a href="">contact zithande</a>
         </div>
     </section>
