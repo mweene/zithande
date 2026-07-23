@@ -98,14 +98,14 @@ const MobileMenu = ({ onClick, isOpen }) => {
 
             <div className="bottom-sec px-7 pb-30">
                 <div className="contact">
-                    <p>[contact info]</p>
+                    <p className="font-bold">[contact info]</p>
                     <p>zithandeltd@gmail.com</p>
                     <p>+260 966 001 277</p>
                 </div>
 
                 <div className="mt-4">
-                    <p>[visit us]</p>
-                    <p>visit in rhodespark lusaka</p>
+                    <p className="font-bold">[visit us]</p>
+                    <p>visit in meanwood, lusaka</p>
                 </div>
             </div>
         </div>

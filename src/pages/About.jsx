@@ -1,5 +1,6 @@
 export default function About() {
-    const coreValuesPills = [1,2,3,4,5,6,7,8,9];
+    const coreValuesPills = [
+        'Integrity', 'Accountability', 'Professionalism', 'Consistency', 'Respect', 'Growth Mindset', 'Speed & Efficiency', 'Innovation', 'Client Focus'];//8
     const leadership = [
         {
             id: 1,
@@ -24,37 +25,37 @@ export default function About() {
             <p className="md:w-[55ch] mt-4">Built on a legacy of integrity, resilience and service excellence evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients</p>
         </div>
 
-        <div className="vision flex gap-8 mt-20 bg-white md:p-15 ">
+        <div className="vision flex gap-8 mt-15 bg-white md:p-20 md:px-28">
             <h2>Our Vision & Mission</h2>
-            <div className="columns text-left [&_.text]:border [&_.text]:p-8 [&_.text]:rounded-xl grid gap-4">
-                <div className="text">
-                    <h3>Vision</h3>
-                    <p>"Built on a legacy of integrity, resilience and service excellence  evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients"</p>
+            <div className="columns text-left [&_.text]:p-8 [&_.text]:rounded-xl grid gap-4 [&_span]:font-black [&_.text]:w-[40rem]">
+                <div className="text bg-[#c3ef6d]">
+                    <h3 className="mb-2">Vision</h3>
+                    <p className="italic"><span>"</span>Built on a legacy of integrity, resilience and service excellence  evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients.<span>"</span></p>
                 </div>
-                <div className="text">
-                    <h3>Mission</h3>
-                    <p>"To deliver quality products, efficient services, and measurable value through integrity-driven systems, professional execution, and sustainable partnerships."</p>
+                <div className="text bg-[#c3ef6d]">
+                    <h3 className="mb-2">Mission</h3>
+                    <p className="italic"><span>"</span>To deliver quality products, efficient services, and measurable value through integrity-driven systems, professional execution, and sustainable partnerships.<span>"</span></p>
                 </div>
             </div>
         </div>
 
-        <div className="values pb-15 mt-20">
-            <h2>Core values</h2>
+        <div className="values pb-15 mt-20 grid place-content-center place-items-center">
+            <h2>Our Core values</h2>
 
-            <div className="pills flex gap-2 place-content-center mt-8">
+            <div className="pills gap-2 place-content-center place-items-center mt-8 md:w-[40rem]">
                 {coreValuesPills.map((v, i) => (
-                    <div className="pill border rounded-full p-4 px-10" key={i}>{v}</div>
+                    <div className="pill border rounded-full py-4 w-full" key={i}>{v}</div>
                 ))}
             </div>
         </div>
 
         <div className="leadership grid place-items-center bg-white py-20">
-            <h2>Leadership</h2>
+            <h2>Our Leadership</h2>
             <p className="md:w-[55ch] mt-4">Zithande Limited is committed to responsible governance, and continues to strengthen its board advisory structure, compliance framework and reporting standards.</p>
 
             <div className="cards mt-8 mx-15 grid gap-4">
                 {leadership.map(leader => (
-                    <div className="card border grid gap-4 rounded-xl h-96" key={leader.id}>
+                    <div className="card border grid gap-4 rounded-2xl h-96" key={leader.id}>
                         <div className="image bg-amber-200 m-2 rounded-lg">
                             <img src={leader.imageUrl} alt="leader image" />
                         </div>

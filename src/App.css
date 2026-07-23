@@ -32,6 +32,7 @@ p {
 
 button {
     font-size: .95rem;
+    cursor: pointer;
 }
 
 main {
@@ -111,11 +112,15 @@ nav .nav-menu {
 }
 
 .sectors .slider .card {
-    height: 150px;
-    width: 150px;
+    padding: .75rem 2rem;
     flex-shrink: 0;
-    background-color: #dbe4c7;
-    border-radius: .45rem;
+    background-color: #f8ffe6;
+    border-radius: 1rem;
+    border: 2px solid #29340b;
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: #29340b;
 }
 
 .value-pillars .cards {
@@ -132,8 +137,40 @@ nav .nav-menu {
     display: grid;
 }
 
+.value-pillars .text {
+    place-self: end;
+}
+
 .value-pillars .card:nth-child(1) {
-    background-color: #29340b;
+    background:
+        linear-gradient(1deg, #0d1103, #1b23071c),
+        url("assets/dependable.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.value-pillars .card:nth-child(2) {
+    background:
+        linear-gradient(1deg, #0d1103, #1b23071c),
+        url("assets/timely.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.value-pillars .card:nth-child(3) {
+    background:
+        linear-gradient(1deg, #0d1103, #1b23071c),
+        url("assets/branded2.jpg");
+    background-size: cover;
+    background-position: center center;
+}
+
+.value-pillars .card:nth-child(4) {
+    background:
+        linear-gradient(1deg, #0d1103, #1b23071c),
+        url("assets/contracts.jpg");
+    background-size: cover;
+    background-position: center center;
 }
 
 .value-pillars .cards h2 {
@@ -154,20 +191,33 @@ nav .nav-menu {
 }
 
 .four-divisions .cards {
-    display: grid;
     margin-top: 1.5rem;
 
 }
 
-.four-divisions .cards .card {
-    padding: 2rem;
-    background-color: #e5ffa9;
-    border-radius: .75rem;
-    border: 1px solid #14190596;
+.track-record .cards {
+    margin: 0 10rem;
 }
 
-.four-divisions .cards .card:not(:first-child) {
-    margin-top: -1rem;
+.track-record h3 {
+    font-size: var(--text-5xl);
+}
+
+.four-divisions .cards .card {
+    padding: 2rem;
+    background-color: #BCD979;
+    border-radius: 1rem;
+}
+
+.four-divisions .cards .card span {
+    font-size: 10rem;
+    color: #f8ffe6;
+}
+
+.compliance .badge {
+    font-size: 1.5rem;
+    place-content: center;
+    place-items: center;
 }
 
 .leadership .cards .card {
@@ -184,6 +234,19 @@ nav .nav-menu {
 
 .services ul li h3 {
     font-size: 1.12rem;
+}
+
+.about-page .vision .text h3 {
+    font-size: 1.35rem;
+}
+
+.about-page .vision .text p {
+    font-size: 1.05rem;
+}
+
+.about-page .values .pills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 @keyframes scroll {

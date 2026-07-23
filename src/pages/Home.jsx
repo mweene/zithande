@@ -1,13 +1,38 @@
 import Button from "../components/Button";
-import { ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Award } from "lucide-react";
 import heroImage from "../assets/hero.png";
+import { useState } from "react";
 
 export default function Home() {
-    const sectorCards = [1,2,3,4,5,6,7,8,9,10];
+    const [trackRecord, setTrackRecord] = useState(0);
+
+    const sectorCards = ['government ministries','local authorities','mining companies','construction firms','schools & universities','Hospitals & clinics','NGOs','Banks','SMEs','retail & hospitality sectors'];
     const divisionsCards = [
         'General supply', 'Branding & Coperate identity',
         'Food supply & Catering', 'Busines support services'
     ];
+    const trackRecords = [
+        { id: 'trusted', header: "Trusted delivery", paragraph: "We understand operational urgency and treat deadlines as commitments" },
+        { id: 1, header: "Procurement intelligence", paragraph: "Smart sourcing and effective negotiation that optimizes value" },
+        { id: 1, header: "Local strength, national reach", paragraph: "Proudly Zambian, and strategically positioned to scale regionally" }
+    ];
+
+
+    const handlePrev = () => {
+        if (trackRecord <= 0) {
+            setTrackRecord(trackRecords.length - 1)
+        } else {
+            setTrackRecord(prev => prev - 1)
+        }
+    }
+
+    const handleNext = () => {
+        if (trackRecord === trackRecords.length - 1) {
+            setTrackRecord(0)
+        } else {
+            setTrackRecord( prev => prev + 1)
+        }
+    }
     return (
         <section className="home">
             <div className="hero">
@@ -60,36 +85,35 @@ export default function Home() {
                     </p>
                 </div>
                 <div className="cards md:grid md:grid-cols-4 md:mt-4">
-                    <div className="card bg-[#29340b]">
+                    <div className="card">
                         <div className="text">
                             <h3>Fast dependable sourcing</h3>
                             <p>We source smartly and negotiate to protect your budget</p>
                         </div>
-                        <img src="-" alt="card image"/>
                     </div>
                     <div className="card">
+                        <div className="image"></div>
                         <div className="text">
                             <h3>Timely delivery</h3>
                             <p>We value deadlines and understand operational urgency</p>
                         </div>
-                        <img src="-" alt="card image"/>
                     </div>
                     <div className="card">
                         <div className="text">
                             <h3>Branding & Visibilty</h3>
                             <p>Uniforms, signage and corporate identity, done in-house</p>
                         </div>
-                        <img src="-" alt="card image"/>
                     </div>
                     <div className="card">
                         <div className="text">
                             <h3>Scalable contracts</h3>
                             <p>From	one-off	orders to recurring, long-term agreements</p>
                         </div>
-                        <img src="-" alt="card image"/>
                     </div>
                 </div>
             </div>
+
+
 
             <div className="track-record my-16 py-12 px-6 grid place-items-center md:px-15">
                 <div className="text-center grid place-items-center">
@@ -101,21 +125,29 @@ export default function Home() {
                 </div>
 
                 <div className={`
-                    cards grid gap-4 [&_.card]:bg-[#d1deb3] [&_.card]:p-4 [&_.card]:rounded-xl
-                    [&_.card]:h-36  [&_.card]:w-fit [&_.card]:text-center place-items-center md:grid-cols-3
+                    cards md:flex gap-6 place-content-between place-items-center
                 `}>
-                    <div className="card">
-                        <h3>Trusted delivery</h3>
-                        <p className="mt-2">We understand operational urgency and treat deadlines as commitments</p>
+                    <button
+                        onClick={handlePrev}
+                        className={`border-2 border-[#29340b] p-2 rounded-full`}
+                    >
+                        <ChevronLeft color="#29340b" />
+                    </button>
+
+                    <div
+                        key={trackRecords[trackRecord].id}
+                        className="card bg-[#BDE4A8] border-2 border-[#485b3f] p-12 rounded-2xl text-center md:w-[40rem] md:h-[15rem]"
+                    >
+                        <h3 className="text-[#2b3426]">{trackRecords[trackRecord].header}</h3>
+                        <p className="mt-2 text-[#2b3426]">{trackRecords[trackRecord].paragraph}</p>
                     </div>
-                    <div className="card">
-                        <h3>Procurement	intelligence</h3>
-                        <p className="mt-2">Smart sourcing and effective negotiation that optimizes value</p>
-                    </div>
-                    <div className="card">
-                        <h3>Local strength, national reach</h3>
-                        <p className="mt-2">Proudly Zambian, and strategically positioned to scale regionally</p>
-                    </div>
+
+                    <button
+                        onClick={handleNext}
+                        className="border-2 border-[#29340b] p-2 rounded-full"
+                    >
+                        <ChevronRight color="#29340b"/>
+                    </button>
                 </div>
                 <a href="" className="flex items-center gap-1 mt-8 text-[#29340b] underline">
                     Meet the leadership
@@ -123,33 +155,47 @@ export default function Home() {
                 </a>
             </div>
 
-            <div className="four-divisions mb-16 py-12 px-6 bg-[#f8ffe6] text-center grid place-content-center">
-                <h2 className="md:w-[20ch]">Four divisions, <br/> one supplier</h2>
 
-                <div className="cards w-4/5 place-self-center">
+
+            <div className="four-divisions mb-16 py-12 px-6 bg-[#f8ffe6] text-center grid place-content-center">
+                <h2 className="">Four divisions, one supplier</h2>
+
+                <div className="cards grid md:grid-cols-2 gap-2 w-4/5 place-self-center">
                     {divisionsCards.map((d, i) => (
-                        <div className="card" key={i}>
-                            <h3>{i+1}. {d}</h3>
+                        <div key={i} className="card overflow-hidden relative z-20">
+                            <h3>
+                                <span className="absolute top-0 left-0 -mt-5 -z-10">
+                                    {i + 1}
+                                </span>
+                                {d}
+                            </h3>
                         </div>
                     ))}
                 </div>
             </div>
 
+
+
             <div className="compliance my-16 py-12 px-6 text-center grid place-content-center">
                 <h2>Registred, Cleared, Accountable</h2>
-                <div className="badges mt-4 flex gap-2 [&_.badge]:p-2 [&_.badge]:bg-[#d1deb3] place-self-center">
-                    <div className="badge">zra</div>
-                    <div className="badge">license</div>
-                    <div className="badge">council</div>
+                <div className="badges text-center mt-8 grid gap-2 [&_.badge]:rounded-full [&_.badge]:py-4 [&_.badge]:px-8 place-self-center">
+                    <div className="badge flex gap-2 place-items-cener bg-[#bec3ff] border-2 border-[#464c8d] text-[#464c8d]">
+                        <Award />
+                        ZRA Tax Clearance Certificate
+                    </div>
+                    <div className="badge flex gap-2 place-items-center bg-[#ffbebe] border-2 border-[#672121] text-[#672121]">
+                        <Award />
+                        Certificate of Incorporation
+                    </div>
                 </div>
             </div>
 
-            <div className="in-touch bg-white grid place-content-center p-15 text-center">
-                <h2 className="md:w-[23ch]">
+            <div className="in-touch bg-white grid place-content-center place-items-center p-15 text-center">
+                <h2 className="md:w-[23ch] mb-4">
                     Discuss your procurement
                     requirements with our team
                 </h2>
-                <Button>Get in touch</Button>
+                <Button styles="w-fit font-[500]">Get in touch</Button>
             </div>
         </section>
     );
