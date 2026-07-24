@@ -1,7 +1,18 @@
 export default function Industries() {
-    const industries = [1,2,3,4,5,6,7,8,9,10];
+    const industries = [
+        "Government Ministries & Agencies",
+        "Local Authorities",
+        "Mining Companies",
+        "Construction Firms",
+        "Schools & Universities",
+        "Hospitals & Clinics",
+        "NGOs & Donor Agencies",
+        "Banks & Financial Institutions",
+        "SMEs & Corporates",
+        "Retail & Hospitality Sector"
+    ]
   return (
-    <section className="industries">
+    <section className="industries-page">
         <div className="serve text-center grid place-items-center pt-16 pb-12">
             <p className="tagline">Industries we serve</p>
             <h1 className="md:w-[23ch]">Positioned across ten institutional sectors</h1>
@@ -9,9 +20,11 @@ export default function Industries() {
         </div>
 
         <div className="ten-industries-cards md:mx-15 pb-15">
-            {industries.map((industry, idx) => (
-                <div className="card border p-5 rounded-lg" key={idx}>
-                    {industry}
+            {industries.map((industry, index) => (
+                <div key={index} className="card grid place-content-center border p-5 rounded-2xl">
+                    <p className="text-center">
+                        {industry}
+                    </p>
                 </div>
             ))}
         </div>
@@ -19,12 +32,12 @@ export default function Industries() {
         <div className="same-discipline bg-white grid place-items-center text-center py-15">
             <h2 className="md:w-[23ch]">The same discipline, wherever you sit</h2>
 
-            <div className="cards grid md:grid-cols-2 gap-4 mx-20 mt-8 [&_.card]:p-10 [&_.card]:rounded-lg">
+            <div className="cards grid md:grid-cols-2 gap-4 mx-20 mt-8 [&_.card]:p-10 [&_.card]:rounded-2xl">
                 <div className="card border">
                     <p>Whether it's a ministry tender, a mine site's PPE order, or a school's stationery contract the process is the same: understand urgency, source smartly, deliver on time</p>
                 </div>
                 <div className="card border">
-                    <p>Our four divisions flex to whatever combination your sector actually needs — not a fixed package</p>
+                    <p>Our four divisions flex to whatever combination your sector actually needs, not a fixed package</p>
                 </div>
             </div>
         </div>

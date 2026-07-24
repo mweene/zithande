@@ -4,12 +4,12 @@
 }
 
 .tagline {
-    font-size: .72rem;
+    font-size: .9rem;
     font-weight: 600;
     border: 1px solid #d0f176;
     border-radius: .4rem;
     width: fit-content;
-    padding: .1rem .5rem;
+    padding: .125rem 1rem;
     margin-bottom: .5rem;
     background-color: #eaffb2bd;
     color: #596a2e;
@@ -59,6 +59,7 @@ nav .menu {
 nav li {
     transform: scale(1);
     transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    width: fit-content;
 }
 
 nav li:hover {
@@ -226,14 +227,39 @@ nav .nav-menu {
     text-align: left;
 }
 
-.industries .ten-industries-cards {
+.leadership .cards .card .image {
+    background-image: url("https://picsum.photos/900");
+    background-size: cover;
+    background-position: center center;
+}
+
+.leadership .cards .card p {
+    font-size: .95rem;
+    color: #3c432d;
+}
+
+.leadership .cards .card h3 {
+    color: #3c432d;
+}
+
+.industries-page .ten-industries-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: .5rem;
 }
 
+.industries-page .ten-industries-cards .card:nth-child(odd) {
+    background-color: #BCD979;
+    border: 1px solid #91a85d;
+}
+
+.industries-page .ten-industries-cards .card:nth-child(even) {
+    background-color: #fff;
+    border: 1px solid #bec2b5;
+}
+
 .services ul li h3 {
-    font-size: 1.12rem;
+    font-size: 1.5rem;
 }
 
 .about-page .vision .text h3 {

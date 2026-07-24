@@ -59,7 +59,6 @@ const MobileMenu = ({ onClick, isOpen }) => {
             className={`
               menu bg-[#eef7dc] w-full h-dvh md:w-2/5 fixed top-0 right-0
               flex flex-col place-content-between z-40 overflow-y-scroll
-              transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}
             `}
         >
             <button
@@ -99,13 +98,22 @@ const MobileMenu = ({ onClick, isOpen }) => {
             <div className="bottom-sec px-7 pb-30">
                 <div className="contact">
                     <p className="font-bold">[contact info]</p>
-                    <p>zithandeltd@gmail.com</p>
-                    <p>+260 966 001 277</p>
+                    <a href="">
+                        <p>acwillombe@gmail.com</p>
+                    </a>
+                    <a href="">
+                        <p>+260 977 784 751</p>
+                    </a>
+                    <a href="">
+                        <p>+260 955 784 751</p>
+                    </a>
                 </div>
 
                 <div className="mt-4">
                     <p className="font-bold">[visit us]</p>
-                    <p>visit in meanwood, lusaka</p>
+                    <a href="">
+                        <p>Gizenga Road, Woodlands, Lusaka</p>
+                    </a>
                 </div>
             </div>
         </div>

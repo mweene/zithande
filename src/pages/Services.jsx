@@ -1,12 +1,50 @@
+import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Services() {
+    const [activeDivision, setActiveDivision] = useState(1);
+
     const divisions = [
-        {id: 1, name: 'General supply', items: []},
-        {id: 2, name: 'Branding & Corporate Identity', items: []},
-        {id: 3, name: 'Food Supply & Catering', items: []},
-        {id: 4, name: 'Business Support Services', items: []},
+        {id: 1, name: 'General supply', items: [
+            "Office stationery",
+            "Printer consumables",
+            "Corporate furniture",
+            "Cleaning materials",
+            "Household supplies",
+            "Protective clothing (PPE)",
+            "Uniforms",
+            "Electrical materials",
+            "Plumbing materials",
+            "Building materials",
+            "IT accessories & hardware"
+        ]},
+        {id: 2, name: 'Branding & Corporate Identity', items: [
+            "Branded uniforms",
+            "Promotional merchandise",
+            "Corporate gifts",
+            "Signage Banners",
+            "Vehicle branding",
+            "Event branding materials"
+        ]},
+        {id: 3, name: 'Food Supply & Catering', items: [
+            "Bulk groceries",
+            "Institutional food supply",
+            "Corporate catering",
+            "Event refreshments"
+        ]},
+        {id: 4, name: 'Business Support Services', items: [
+            "Procurement support",
+            "Documentation support",
+            "Customer service training",
+            "Business advisory support",
+            "SME systems consulting"
+        ]},
     ];
+
+    const handleActiveDivision = (id) => {
+        setActiveDivision(id);
+    }
+
   return (
     <section className="services">
         <div className="four-divisions text-center grid place-items-center py-16">
@@ -22,17 +60,35 @@ export default function Services() {
         </div>
 
         <div className="list grid place-content-center">
-            <ul className="grid gap-2 md:w-200 [&_li]:cursor-pointer [&_li]:rounded-lg">
+            <ul className="grid gap-2 md:w-200 [&_li]:cursor-pointer [&_li]:rounded-2xl">
                 {divisions.map(division => (
-                    <li key={division.id} className="flex place-content-between items-center border p-6">
-                        <h3 className="">{division.name}</h3>
-                        <ChevronDown size={22}/>
+                    <li
+                        key={division.id}
+                        onClick={() => handleActiveDivision(division.id)}
+                        className="p-6 bg-white"
+                    >
+                        <div className="flex place-content-between items-center">
+                            <h3 className="">{division.name}</h3>
+                            {division.id === activeDivision ? <ChevronUp size={27}/> : <ChevronDown size={27}/>}
+                        </div>
+                        {division.id === activeDivision && (
+                            <ul className="content grid md:grid-cols-4 gap-1.5 mt-8">
+                                {division.items.map((item, index) => (
+                                    <li
+                                        key={index}
+                                        className="border text-center p-4 grid place-content-center"
+                                    >
+                                        <p>{item}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
                     </li>
                 ))}
             </ul>
         </div>
 
-        <div className="flexible md:p-15 md:py-20 my-20 bg-white text-center grid ">
+        <div className="flexible md:p-15 md:py-20 my-20 bg-white text-center grid">
             <h2>
                 Flexible contracting
             </h2>
@@ -55,7 +111,9 @@ export default function Services() {
 
         <div className="closing md:px-15 pb-20 text-center grid place-items-center">
             <h2 className="md:w-[23ch]">Request a quote for any of the above</h2>
-            <a href="" className="bg-white">Request a quote</a>
+              <a href="" className="bg-white">
+                  <p>Request a quote</p>
+              </a>
         </div>
     </section>
   )

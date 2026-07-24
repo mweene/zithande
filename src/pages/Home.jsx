@@ -136,7 +136,7 @@ export default function Home() {
 
                     <div
                         key={trackRecords[trackRecord].id}
-                        className="card bg-[#BDE4A8] border-2 border-[#485b3f] p-12 rounded-2xl text-center md:w-[40rem] md:h-[15rem]"
+                        className="card bg-[#BDE4A8] border-2 border-[#485b3f] p-12 rounded-2xl text-center md:w-160 md:h-60"
                     >
                         <h3 className="text-[#2b3426]">{trackRecords[trackRecord].header}</h3>
                         <p className="mt-2 text-[#2b3426]">{trackRecords[trackRecord].paragraph}</p>
