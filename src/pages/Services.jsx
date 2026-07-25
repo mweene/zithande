@@ -1,8 +1,9 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Services() {
-    const [activeDivision, setActiveDivision] = useState(1);
+    const [activeDivision, setActiveDivision] = useState(null);
 
     const divisions = [
         {id: 1, name: 'General supply', items: [
@@ -60,19 +61,19 @@ export default function Services() {
         </div>
 
         <div className="list grid place-content-center">
-            <ul className="grid gap-2 md:w-200 [&_li]:cursor-pointer [&_li]:rounded-2xl">
+            <ul className="grid gap-2 md:w-200 [&_li]:cursor-pointer [&_li]:rounded-2xl rounded-3xl border p-4 bg-white">
                 {divisions.map(division => (
                     <li
                         key={division.id}
                         onClick={() => handleActiveDivision(division.id)}
-                        className="p-6 bg-white"
+                        className=""
                     >
-                        <div className="flex place-content-between items-center">
+                        <div className="flex place-content-between items-center p-6 bg-amber-200 rounded-2xl">
                             <h3 className="">{division.name}</h3>
                             {division.id === activeDivision ? <ChevronUp size={27}/> : <ChevronDown size={27}/>}
                         </div>
                         {division.id === activeDivision && (
-                            <ul className="content grid md:grid-cols-4 gap-1.5 mt-8">
+                            <ul className="content grid md:grid-cols-4 gap-1.5 my-8 mx-4">
                                 {division.items.map((item, index) => (
                                     <li
                                         key={index}
@@ -88,12 +89,15 @@ export default function Services() {
             </ul>
         </div>
 
-        <div className="flexible md:p-15 md:py-20 my-20 bg-white text-center grid">
-            <h2>
+        <div className="flexible md:p-15 md:py-20 my-20 bg-white grid">
+            <h2 className="text-center">
                 Flexible contracting
             </h2>
 
-            <div className="cards mt-6 grid md:grid-cols-3 gap-4 [&_.card]:border [&_.card]:rounded-lg [&_.card]:px-10 [&_.card]:py-15">
+            <div className={`
+                cards mt-6 grid md:grid-cols-3 gap-4 [&_.card]:border
+                [&_.card]:rounded-3xl [&_.card]:p-10 [&_.card]:bg-[#eef7dc]
+            `}>
                 <div className="card">
                     <h3>One-off supply</h3>
                     <p>A single order, sourced and delivered on schedule</p>
@@ -111,9 +115,11 @@ export default function Services() {
 
         <div className="closing md:px-15 pb-20 text-center grid place-items-center">
             <h2 className="md:w-[23ch]">Request a quote for any of the above</h2>
-              <a href="" className="bg-white">
-                  <p>Request a quote</p>
-              </a>
+              <Link to="/contact">
+                  <p className="bg-white">
+                      Request a quote
+                  </p>
+              </Link>
         </div>
     </section>
   )

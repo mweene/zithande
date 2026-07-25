@@ -63,7 +63,7 @@ const MobileMenu = ({ onClick, isOpen }) => {
         >
             <button
                 onClick={onClick}
-                className="self-end cursor-pointer p-5 pt-7"
+                className="self-end cursor-pointer"
             >
                 <X size={30} color="#455714"/>
             </button>

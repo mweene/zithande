@@ -27,11 +27,18 @@ h2 {
 
 p {
     font-size: 1.05rem;
+    color: #111;
+}
+
+a {
     color: #29340b;
 }
 
 button {
     font-size: .95rem;
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid #29340b;
     cursor: pointer;
 }
 
@@ -82,6 +89,12 @@ nav .nav-menu {
     padding: .45rem;
     background-color: #eef7dc;
     border-radius: .25rem;
+    border: none;
+}
+
+nav .menu button {
+    border: none;
+    margin: 2rem;
 }
 
 .home .hero {
@@ -101,6 +114,15 @@ nav .nav-menu {
     margin: 1rem 0;
 }
 
+.home .hero .image {
+    background-image: url("/src/assets/zithande.webp");
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 450px;
+    margin-top: -9rem;
+}
+
 .sectors {
     overflow-x: hidden;
 }
@@ -113,15 +135,15 @@ nav .nav-menu {
 }
 
 .sectors .slider .card {
-    padding: .75rem 2rem;
+    padding: 2rem;
     flex-shrink: 0;
-    background-color: #f8ffe6;
+    background-color: #dfe8ce;
     border-radius: 1rem;
-    border: 2px solid #29340b;
+    border: 2px solid #c8d0b45e;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 1.15rem;
-    color: #29340b;
+    color: #29340ba3;
 }
 
 .value-pillars .cards {
@@ -273,6 +295,16 @@ nav .nav-menu {
 .about-page .values .pills {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.about-page .values .pills .pill:nth-child(odd) {
+    background-color: #BCD979;
+    border: 1px solid #91a85d;
+}
+
+.about-page .values .pills .pill:nth-child(even) {
+    background-color: #fff;
+    border: 1px solid #bec2b5;
 }
 
 @keyframes scroll {

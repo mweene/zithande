@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 import { ChevronLeft, ChevronRight, Award } from "lucide-react";
-import heroImage from "../assets/hero.png";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Home() {
@@ -49,20 +49,23 @@ export default function Home() {
                     </p>
 
                     <div className="ctas grid md:flex gap-3 md:place-content-center mt-4 w-full">
-                        <Button type={'primary'} styles={'flex place-items-center place-content-center gap-1'}>
-                            Request a qoute
-                            <ChevronRight size={20} />
-                        </Button>
-                        <Button>View our services</Button>
+                        <Link to="/contact">
+                            <Button type={'primary'} styles={'flex place-items-center place-content-center gap-1'}>
+                                Request a qoute
+                                <ChevronRight size={20} />
+                            </Button>
+                        </Link>
+                        <Link to="/services">
+                            <Button>View our services</Button>
+                        </Link>
                     </div>
                 </div>
-                <div className="hero-image mt-6">
-                    <img src={heroImage} alt="hero image" className="w-full h-16" />
+                <div className="image mt-6">
                 </div>
             </div>
 
             <div className="sectors mt-20 ">
-                <h2 className="text-center mb-4">Sectors we serve</h2>
+                <h2 className="text-center text-[#3e472b] mb-4">Sectors we serve</h2>
                 <div className="cards slider">
                     {sectorCards.map((c, i) => (
                         <div className="card" key={i}>{c}</div>
@@ -149,10 +152,12 @@ export default function Home() {
                         <ChevronRight color="#29340b"/>
                     </button>
                 </div>
-                <a href="" className="flex items-center gap-1 mt-8 text-[#29340b] underline">
-                    Meet the leadership
-                    <ChevronRight size={17}/>
-                </a>
+                <Link to="about">
+                    <p className="flex items-center gap-1 mt-8 text-[#29340b] underline">
+                        Meet the leadership
+                        <ChevronRight size={17}/>
+                    </p>
+                </Link>
             </div>
 
 
@@ -195,7 +200,9 @@ export default function Home() {
                     Discuss your procurement
                     requirements with our team
                 </h2>
-                <Button styles="w-fit font-[500]">Get in touch</Button>
+                <Link to="/contact">
+                    <Button styles="w-fit font-[500]">Get in touch</Button>
+                </Link>
             </div>
         </section>
     );

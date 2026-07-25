@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function About() {
     const coreValuesPills = [
         'Integrity', 'Accountability', 'Professionalism', 'Consistency', 'Respect', 'Growth Mindset', 'Speed & Efficiency', 'Innovation', 'Client Focus'];//8
@@ -90,7 +92,9 @@ export default function About() {
 
         <div className="partnership bg-white grid place-content-center place-items-center py-16">
             <h2 className="md:w-[23ch]">Discuss a partnership with our leadership team</h2>
-            <a href="" className="mt-8 rounded-full border p-4 w-fit">contact zithande</a>
+            <Link to="/contact">
+                <p href="" className="mt-8 rounded-full border p-4 w-fit">contact zithande</p>
+            </Link>
         </div>
     </section>
   )

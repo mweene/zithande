@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export default function Industries() {
     const industries = [
         "Government Ministries & Agencies",
@@ -44,7 +46,9 @@ export default function Industries() {
 
         <div className="closing text-center grid place-items-center py-15">
             <h2 className="md:w-[23ch]">Don't see your sector listed? We likely still serve it</h2>
-            <a href="" className="bg-white mt-8">Ask us directly</a>
+              <Link to="/contact">
+                  <p className="bg-white mt-8">Ask us directly</p>
+              </Link>
         </div>
     </section>
   )
