@@ -7,7 +7,7 @@
     font-size: .9rem;
     font-weight: 600;
     border: 1px solid #d0f176;
-    border-radius: .4rem;
+    border-radius: 1rem;
     width: fit-content;
     padding: .125rem 1rem;
     margin-bottom: .5rem;
@@ -26,7 +26,7 @@ h2 {
 }
 
 p {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     color: #111;
 }
 
@@ -40,6 +40,12 @@ button {
     background-color: transparent;
     border: 2px solid #29340b;
     cursor: pointer;
+    transition: background-color .3s ease, transform .3s ease;
+}
+
+button:hover {
+    background-color: yellowgreen !important;
+    transform: translateY(-3px);
 }
 
 main {
@@ -47,7 +53,7 @@ main {
 }
 
 .card h3 {
-    font-size: 1.35rem;
+    font-size: 1.5rem;
 }
 
 
@@ -115,16 +121,16 @@ nav .menu button {
 }
 
 .home .hero .image {
-    background-image: url("/src/assets/zithande.webp");
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 450px;
-    margin-top: -9rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
 }
 
 .sectors {
     overflow-x: hidden;
+}
+
+.sectors h2 {
+    font-size: 1.75rem;
 }
 
 .sectors .slider {
@@ -137,13 +143,13 @@ nav .menu button {
 .sectors .slider .card {
     padding: 2rem;
     flex-shrink: 0;
-    background-color: #dfe8ce;
+    background-color: #c1f063;
     border-radius: 1rem;
-    border: 2px solid #c8d0b45e;
+    border: 2px solid #29340b;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 1.15rem;
-    color: #29340ba3;
+    color: #181e06;
 }
 
 .value-pillars .cards {
@@ -207,10 +213,15 @@ nav .menu button {
 .value-pillars .cards p {
     margin: .5rem 0;
     color: #f0ffcb;
+    font-size: 1rem;
 }
 
 .value-pillars .cards h3 {
     color: #f8ffe6;
+}
+
+.track-record h3 {
+    font-size: 1.5rem;
 }
 
 .four-divisions .cards {
@@ -218,23 +229,28 @@ nav .menu button {
 
 }
 
-.track-record .cards {
-    margin: 0 10rem;
-}
-
-.track-record h3 {
-    font-size: var(--text-5xl);
+.track-record .card p {
+    font-size: 2rem;
 }
 
 .four-divisions .cards .card {
     padding: 2rem;
-    background-color: #BCD979;
+    background-color: #c1f063;
     border-radius: 1rem;
+    border: 2px solid #29340b;
+}
+
+.four-divisions .cards .card:nth-child(1){
+    background-color: #adde4a;
+}
+
+.four-divisions .cards .card:nth-child(4){
+    background-color: #adde4a;
 }
 
 .four-divisions .cards .card span {
     font-size: 10rem;
-    color: #f8ffe6;
+    color: #f8ffe66b;
 }
 
 .compliance .badge {
@@ -315,11 +331,11 @@ nav .menu button {
 
 @media screen and (min-width: 1200px) {
     h2 {
-        font-size: 50px;
+        font-size: 4rem;
     }
 
     h1 {
-        font-size: 70px !important;
+        font-size: 80px !important;
     }
 }
 

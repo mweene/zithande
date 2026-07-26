@@ -15,7 +15,7 @@ export default function About() {
             id: 2,
             role: 'Chief Operating Officer',
             name: 'Kochiwe Jere',
-            bio: 'Results-oriented operations executive with strong experience in purchasing & procurement systems, supplier engagement & negotiation, stock and inventory coordination, entrepreneurial operations, record keeping & documentation control, workflow efficiency systems, and commercial growth execution.',
+            bio: 'Results-oriented operations executive with strong experience in purchasing and procurement systems, supplier engagement and negotiation, stock and inventory coordination, entrepreneurial operations, record keeping and documentation control, workflow efficiency systems, and commercial growth execution.',
             imageUrl: '-'
         },
     ]
@@ -27,14 +27,14 @@ export default function About() {
             <p className="md:w-[55ch] mt-4">Built on a legacy of integrity, resilience and service excellence evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients</p>
         </div>
 
-        <div className="vision flex gap-8 mt-15 bg-white md:p-20 md:px-28">
+        <div className="vision md:flex gap-8 mt-15 bg-white md:p-20 md:px-28">
             <h2>Our Vision & Mission</h2>
             <div className="columns text-left [&_.text]:p-8 [&_.text]:rounded-xl grid gap-4 [&_span]:font-black [&_.text]:w-160">
-                <div className="text bg-[#c3ef6d]">
+                <div className="text bg-[#c1f063] border-2">
                     <h3 className="mb-2">Vision</h3>
                     <p className="italic"><span>"</span>Built on a legacy of integrity, resilience and service excellence  evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients.<span>"</span></p>
                 </div>
-                <div className="text bg-[#c3ef6d]">
+                <div className="text bg-[#c1f063] border-2">
                     <h3 className="mb-2">Mission</h3>
                     <p className="italic"><span>"</span>To deliver quality products, efficient services, and measurable value through integrity-driven systems, professional execution, and sustainable partnerships.<span>"</span></p>
                 </div>
@@ -76,7 +76,7 @@ export default function About() {
         <div className="internship grid place-items-center md:p-15 md:pt-20">
             <h2 className="md:w-[23ch]">Youth empowerment through internship & seasonal work</h2>
 
-            <div className="cards grid grid-cols-2 gap-4 mt-8 text-left [&_.card]:border [&_.card]:h-80 [&_.card]:rounded-xl">
+            <div className="cards grid grid-cols-2 gap-4 mt-8 text-left [&_.card]:border [&_.card]:rounded-xl">
                 <div className="card">
                     <p className="p-8">
                         Practical opportunities for young people through internships and seasonal temporary employment reducing youth unemployment one placement at a time

@@ -40,12 +40,11 @@ export default function Home() {
                     <p className="tagline">
                         Zambian owned Female led Est.2011
                     </p>
-                    <h1 className="md:w-[23ch]">
-                        Dependable supply, delivered on institutional terms
+                    <h1 className="md:w-[20ch]">
+                        Dependable Procurement for Institutions
                     </h1>
-                    <p className="lead md:w-[55ch]">
-                        Dependable procurement, supply chain, branding and business
-                        support for institutions across zambia
+                    <p className="lead md:w-[65ch]">
+                        We provide reliable procurement, supply chain solutions, branding, and business support. Serving institutions across Zambia with consistency and trust.
                     </p>
 
                     <div className="ctas grid md:flex gap-3 md:place-content-center mt-4 w-full">
@@ -60,12 +59,12 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-                <div className="image mt-6">
+                <div className="image mt-6 md:h-128 md:mx-40 bg-[#c1f063]">
                 </div>
             </div>
 
-            <div className="sectors mt-20 ">
-                <h2 className="text-center text-[#3e472b] mb-4">Sectors we serve</h2>
+            <div className="sectors mt-24 pb-16">
+                <h2 className="text-center mb-4">Sectors we serve</h2>
                 <div className="cards slider">
                     {sectorCards.map((c, i) => (
                         <div className="card" key={i}>{c}</div>
@@ -76,7 +75,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="value-pillars bg-[#f8ffe6] my-16 py-12 px-6 md:px-15">
+            <div className="value-pillars bg-[#f8ffe6] py-20 px-6 md:px-15">
                 <div className="text-center grid place-items-center">
                     <h2 className="md:w-[20ch]">
                         What institutional buyers require from a supplier
@@ -118,39 +117,41 @@ export default function Home() {
 
 
 
-            <div className="track-record my-16 py-12 px-6 grid place-items-center md:px-15">
-                <div className="text-center grid place-items-center">
-                    <h2 className="md:w-[20ch]">A track record built on consistency</h2>
-                    <p className="mt-4 mb-8 md:w-[50ch]">
-                        We are relationship	driven,	not	transactional
-                        structured for long-term supply agreements, not one-off orders
-                    </p>
+            <div className="track-record my-16 py-12 px-6 grid md:px-60">
+                <div className="track-record-top flex gap-8 place-items-end mb-15">
+                    <div className="text">
+                        <h2 className="mb-4">A track record built on consistency</h2>
+                        <p className="">
+                            We are relationship	driven,	not	transactional
+                            structured for long-term supply agreements, not one-off orders
+                        </p>
+                    </div>
+                    <div className="buttons flex gap-4 h-fit">
+                        <button
+                            onClick={handlePrev}
+                            className={`border-2 border-[#29340b] bg-[#c1f063]! p-2 rounded-full`}
+                        >
+                            <ChevronLeft color="#29340b" />
+                        </button>
+                        <button
+                            onClick={handleNext}
+                            className="border-2 border-[#29340b] bg-[#c1f063]! p-2 rounded-full"
+                        >
+                            <ChevronRight color="#29340b"/>
+                        </button>
+                    </div>
                 </div>
 
                 <div className={`
                     cards md:flex gap-6 place-content-between place-items-center
                 `}>
-                    <button
-                        onClick={handlePrev}
-                        className={`border-2 border-[#29340b] p-2 rounded-full`}
-                    >
-                        <ChevronLeft color="#29340b" />
-                    </button>
-
                     <div
                         key={trackRecords[trackRecord].id}
-                        className="card bg-[#BDE4A8] border-2 border-[#485b3f] p-12 rounded-2xl text-center md:w-160 md:h-60"
+                        className="card bg-[#c1f063] border-2 border-[#29340b] p-12 rounded-2xl text-center md:h-60 w-full"
                     >
-                        <h3 className="text-[#2b3426]">{trackRecords[trackRecord].header}</h3>
-                        <p className="mt-2 text-[#2b3426]">{trackRecords[trackRecord].paragraph}</p>
+                        <h3 className="">{trackRecords[trackRecord].header}</h3>
+                        <p className="mt-2 text-[#29340b]!">{trackRecords[trackRecord].paragraph}</p>
                     </div>
-
-                    <button
-                        onClick={handleNext}
-                        className="border-2 border-[#29340b] p-2 rounded-full"
-                    >
-                        <ChevronRight color="#29340b"/>
-                    </button>
                 </div>
                 <Link to="about">
                     <p className="flex items-center gap-1 mt-8 text-[#29340b] underline">
@@ -162,12 +163,12 @@ export default function Home() {
 
 
 
-            <div className="four-divisions mb-16 py-12 px-6 bg-[#f8ffe6] text-center grid place-content-center">
-                <h2 className="">Four divisions, one supplier</h2>
+            <div className="four-divisions py-20 px-6 bg-[#f8ffe6] text-center grid place-content-center">
+                <h2 className="mb-4">Four divisions, one supplier</h2>
 
                 <div className="cards grid md:grid-cols-2 gap-2 w-4/5 place-self-center">
                     {divisionsCards.map((d, i) => (
-                        <div key={i} className="card overflow-hidden relative z-20">
+                        <div key={i} className="card overflow-hidden h-30 relative z-20">
                             <h3>
                                 <span className="absolute top-0 left-0 -mt-5 -z-10">
                                     {i + 1}
@@ -183,12 +184,12 @@ export default function Home() {
 
             <div className="compliance my-16 py-12 px-6 text-center grid place-content-center">
                 <h2>Registred, Cleared, Accountable</h2>
-                <div className="badges text-center mt-8 grid gap-2 [&_.badge]:rounded-full [&_.badge]:py-4 [&_.badge]:px-8 place-self-center">
-                    <div className="badge flex gap-2 place-items-cener bg-[#bec3ff] border-2 border-[#464c8d] text-[#464c8d]">
+                <div className="badges text-center mt-8 grid gap-2 [&_.badge]:rounded-2xl [&_.badge]:py-4 [&_.badge]:px-8 place-self-center">
+                    <div className="badge flex gap-2 place-items-cener border-2 bg-[#f8ffe6] text-[#29340b]">
                         <Award />
                         ZRA Tax Clearance Certificate
                     </div>
-                    <div className="badge flex gap-2 place-items-center bg-[#ffbebe] border-2 border-[#672121] text-[#672121]">
+                    <div className="badge flex gap-2 place-items-center border-2 bg-[#f8ffe6] text-[#29340b]">
                         <Award />
                         Certificate of Incorporation
                     </div>
@@ -196,12 +197,16 @@ export default function Home() {
             </div>
 
             <div className="in-touch bg-white grid place-content-center place-items-center p-15 text-center">
-                <h2 className="md:w-[23ch] mb-4">
+                <h2 className="md:w-[23ch] mb-8">
                     Discuss your procurement
                     requirements with our team
                 </h2>
+
                 <Link to="/contact">
-                    <Button styles="w-fit font-[500]">Get in touch</Button>
+                    <Button styles="w-fit font-[500] bg-[#c1f063]! flex hover:bg-[#29340b]!">
+                        Get in touch
+                        <ChevronRight />
+                    </Button>
                 </Link>
             </div>
         </section>
