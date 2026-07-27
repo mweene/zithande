@@ -13,8 +13,8 @@ export default function Home() {
     ];
     const trackRecords = [
         { id: 'trusted', header: "Trusted delivery", paragraph: "We understand operational urgency and treat deadlines as commitments" },
-        { id: 1, header: "Procurement intelligence", paragraph: "Smart sourcing and effective negotiation that optimizes value" },
-        { id: 1, header: "Local strength, national reach", paragraph: "Proudly Zambian, and strategically positioned to scale regionally" }
+        { id: 'procurement', header: "Procurement intelligence", paragraph: "Smart sourcing and effective negotiation that optimizes value" },
+        { id: 'local', header: "Local strength, national reach", paragraph: "Proudly Zambian, and strategically positioned to scale regionally" }
     ];
 
 
@@ -185,12 +185,12 @@ export default function Home() {
             <div className="compliance my-16 py-12 px-6 text-center grid place-content-center">
                 <h2>Registred, Cleared, Accountable</h2>
                 <div className="badges text-center mt-8 grid gap-2 [&_.badge]:rounded-2xl [&_.badge]:py-4 [&_.badge]:px-8 place-self-center">
-                    <div className="badge flex gap-2 place-items-cener border-2 bg-[#f8ffe6] text-[#29340b]">
-                        <Award />
+                    <div className="badge flex gap-2 place-items-cener border-2 bg-[#f8ffe6] text-[#29340b] relative overflow-clip z-1">
+                        <Award color="#d4f09c" size={80} className="absolute inset-0 mt-10 -z-1"/>
                         ZRA Tax Clearance Certificate
                     </div>
-                    <div className="badge flex gap-2 place-items-center border-2 bg-[#f8ffe6] text-[#29340b]">
-                        <Award />
+                    <div className="badge flex gap-2 place-items-center border-2 bg-[#f8ffe6] text-[#29340b] relative overflow-clip z-1">
+                        <Award color="#d4f09c" size={80} className="absolute right-0 mt-22 -z-1"/>
                         Certificate of Incorporation
                     </div>
                 </div>

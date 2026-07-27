@@ -310,17 +310,12 @@ nav .menu button {
 
 .about-page .values .pills {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
-.about-page .values .pills .pill:nth-child(odd) {
-    background-color: #BCD979;
-    border: 1px solid #91a85d;
-}
-
-.about-page .values .pills .pill:nth-child(even) {
-    background-color: #fff;
-    border: 1px solid #bec2b5;
+.about-page .values .pills .pill {
+    font-size: 1.15rem;
+    color: #141905;
 }
 
 @keyframes scroll {

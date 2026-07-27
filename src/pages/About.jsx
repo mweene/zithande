@@ -1,14 +1,36 @@
+import Button from "../components/Button";
 import { Link } from "react-router-dom";
+import {
+    UserCheck,
+    Award,
+    Brain,
+    GaugeCircle,
+    Users,
+    Lightbulb,
+    Repeat,
+    HeartHandshake,
+    ShieldCheck,
+    ChevronRight
+} from "lucide-react";
 
 export default function About() {
     const coreValuesPills = [
-        'Integrity', 'Accountability', 'Professionalism', 'Consistency', 'Respect', 'Growth Mindset', 'Speed & Efficiency', 'Innovation', 'Client Focus'];//8
+        {id: 1, name: 'Integrity', icon: <ShieldCheck />},
+        {id: 2, name: 'Accountability', icon: <UserCheck />},
+        {id: 3, name: 'Professionalism', icon: <Award />},
+        {id: 4, name: 'Respect', icon: <HeartHandshake />},
+        {id: 5, name: 'Growth Mindset', icon: <Brain />},
+        {id: 6, name: 'Speed & Efficiency', icon: <GaugeCircle />},
+        {id: 7, name:  'Innovation', icon: <Lightbulb />},
+        {id: 8, name: 'Client Focus', icon: <Users/>},
+        {id: 9, name: 'Consistency', icon: <Repeat />},
+    ];//8
     const leadership = [
         {
             id: 1,
             role: 'Creative Lead',
             name: 'Astrida Chomba Willombe',
-            bio: 'Accomplished business professional with experience in banking, relationship management, risk management, consulting and enterprise development. Background spans wholesale trade, manufacturing, pharmaceuticals, agriculture, communications and technology. Provides strategic leadership, financial discipline and client-centred direction',
+            bio: 'Accomplished business professional with experience in banking, relationship management, risk management, consulting and enterprise development. Background spans wholesale trade, manufacturing, pharmaceuticals, agriculture, communications and technology. Provides strategic leadership, financial discipline and client-centred direction.',
             imageUrl: '-'
         },
         {
@@ -44,9 +66,18 @@ export default function About() {
         <div className="values pb-15 mt-20 grid place-content-center place-items-center">
             <h2>Our Core values</h2>
 
-            <div className="pills gap-2 place-content-center place-items-center mt-8 md:w-160">
-                {coreValuesPills.map((v, i) => (
-                    <div className="pill border rounded-full py-4 w-full" key={i}>{v}</div>
+            <div className={`
+                pills gap-3 place-content-center place-items-center mt-8 md:w-160
+                [&_.pill]:odd:bg-[#c1f063] [&_.pill]:even:bg-white
+            `}>
+                {coreValuesPills.map(pill => (
+                    <div
+                        key={pill.id}
+                        className="pill border-2 rounded-full py-4 w-full flex gap-2 place-items-center place-content-center"
+                    >
+                        {pill.icon}
+                        {pill.name}
+                    </div>
                 ))}
             </div>
         </div>
@@ -76,10 +107,10 @@ export default function About() {
         <div className="internship grid place-items-center md:p-15 md:pt-20">
             <h2 className="md:w-[23ch]">Youth empowerment through internship & seasonal work</h2>
 
-            <div className="cards grid grid-cols-2 gap-4 mt-8 text-left [&_.card]:border [&_.card]:rounded-xl">
+            <div className="cards grid gap-4 mt-8 text-left [&_.card]:border-2 [&_.card]:bg-[#c1f063] [&_.card]:rounded-2xl md:mx-60">
                 <div className="card">
                     <p className="p-8">
-                        Practical opportunities for young people through internships and seasonal temporary employment reducing youth unemployment one placement at a time
+                        Practical opportunities for young people through internships and seasonal temporary employment reducing youth unemployment one placement at a time.
                     </p>
                 </div>
                 <div className="card">
@@ -91,9 +122,12 @@ export default function About() {
         </div>
 
         <div className="partnership bg-white grid place-content-center place-items-center py-16">
-            <h2 className="md:w-[23ch]">Discuss a partnership with our leadership team</h2>
-            <Link to="/contact">
-                <p href="" className="mt-8 rounded-full border p-4 w-fit">contact zithande</p>
+            <h2 className="md:w-[23ch] mb-8">Discuss a partnership with our leadership team</h2>
+              <Link to="/contact">
+                <Button styles="w-fit font-[500] bg-[#c1f063]! flex hover:bg-[#29340b]!">
+                    Contact Zithande
+                    <ChevronRight />
+                </Button>
             </Link>
         </div>
     </section>

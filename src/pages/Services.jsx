@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, ChevronRight } from "lucide-react";
+import Button from "../components/Button.jsx";
 
 export default function Services() {
     const [activeDivision, setActiveDivision] = useState(null);
@@ -19,7 +20,7 @@ export default function Services() {
             "Building materials",
             "IT accessories & hardware"
         ]},
-        {id: 2, name: 'Branding & Corporate Identity', items: [
+        {id: 2, name: 'Branding and Corporate Identity', items: [
             "Branded uniforms",
             "Promotional merchandise",
             "Corporate gifts",
@@ -27,7 +28,7 @@ export default function Services() {
             "Vehicle branding",
             "Event branding materials"
         ]},
-        {id: 3, name: 'Food Supply & Catering', items: [
+        {id: 3, name: 'Food Supply and Catering', items: [
             "Bulk groceries",
             "Institutional food supply",
             "Corporate catering",
@@ -61,31 +62,45 @@ export default function Services() {
         </div>
 
         <div className="list grid place-content-center">
-            <ul className="grid gap-2 md:w-200 [&_li]:cursor-pointer [&_li]:rounded-2xl rounded-3xl border p-4 bg-white">
-                {divisions.map(division => (
-                    <li
-                        key={division.id}
-                        onClick={() => handleActiveDivision(division.id)}
-                        className=""
-                    >
-                        <div className="flex place-content-between items-center p-6 bg-amber-200 rounded-2xl">
-                            <h3 className="">{division.name}</h3>
-                            {division.id === activeDivision ? <ChevronUp size={27}/> : <ChevronDown size={27}/>}
-                        </div>
-                        {division.id === activeDivision && (
-                            <ul className="content grid md:grid-cols-4 gap-1.5 my-8 mx-4">
-                                {division.items.map((item, index) => (
-                                    <li
-                                        key={index}
-                                        className="border text-center p-4 grid place-content-center"
-                                    >
-                                        <p>{item}</p>
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                    </li>
-                ))}
+            <ul className="grid gap-2 md:w-200 [&_li]:cursor-pointer [&_li]:rounded-2xl rounded-3xl border-2 p-4 bg-white">
+            {divisions.map((division) => {
+              const isOpen = division.id === activeDivision;
+
+              return (
+                <li
+                  key={division.id}
+                  onClick={() => handleActiveDivision(division.id)}
+                  className=""
+                >
+                  {/* Header */}
+                  <div className="flex place-content-between items-center p-6 bg-[#c1f063] rounded-2xl">
+                    <h3 className="">{division.name}</h3>
+                    {isOpen ? <ChevronUp size={27} /> : <ChevronDown size={27} />}
+                  </div>
+
+                  {/* Smooth Height Transition Wrapper */}
+                  <div
+                    className={`grid transition-[grid-template-rows] duration-300 ease-in-out ${
+                      isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+                    }`}
+                  >
+                    {/* Required overflow-hidden inner wrapper */}
+                    <div className="overflow-hidden">
+                      <ul className="content grid md:grid-cols-4 gap-1.5 my-8 mx-4">
+                        {division.items.map((item, index) => (
+                          <li
+                            key={index}
+                            className="border-2 text-center p-4 rounded-xl grid place-content-center hover:bg-slate-100 transition-colors cursor-default!"
+                          >
+                            <p>{item}</p>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
             </ul>
         </div>
 
@@ -114,12 +129,13 @@ export default function Services() {
         </div>
 
         <div className="closing md:px-15 pb-20 text-center grid place-items-center">
-            <h2 className="md:w-[23ch]">Request a quote for any of the above</h2>
-              <Link to="/contact">
-                  <p className="bg-white">
-                      Request a quote
-                  </p>
-              </Link>
+            <h2 className="md:w-[23ch] mb-8">Request a quote for any of the above</h2>
+            <Link to="/contact">
+                <Button styles="w-fit font-[500] bg-[#c1f063]! flex hover:bg-[#29340b]!">
+                    Request a quote
+                    <ChevronRight />
+                </Button>
+            </Link>
         </div>
     </section>
   )
