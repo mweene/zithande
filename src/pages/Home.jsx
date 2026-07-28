@@ -59,12 +59,11 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-                <div className="image mt-6 md:h-128 md:mx-40 bg-[#c1f063]">
+                <div className="image mt-6 h-80 md:h-128 md:mx-40 bg-[#c1f063]">
                 </div>
             </div>
 
-            <div className="sectors mt-24 pb-16">
-                <h2 className="text-center mb-4">Sectors we serve</h2>
+            <div className="sectors mt-16 pb-16">
                 <div className="cards slider">
                     {sectorCards.map((c, i) => (
                         <div className="card" key={i}>{c}</div>
@@ -203,7 +202,7 @@ export default function Home() {
                 </h2>
 
                 <Link to="/contact">
-                    <Button styles="w-fit font-[500] bg-[#c1f063]! flex hover:bg-[#29340b]!">
+                    <Button styles="w-fit font-[500] bg-[#c1f063]! flex">
                         Get in touch
                         <ChevronRight />
                     </Button>

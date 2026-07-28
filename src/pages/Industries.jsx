@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import Button from "../components/Button.jsx";
+import { ChevronRight } from "lucide-react";
 
 export default function Industries() {
     const industries = [
@@ -32,22 +34,26 @@ export default function Industries() {
         </div>
 
         <div className="same-discipline bg-white grid place-items-center text-center py-15">
-            <h2 className="md:w-[23ch]">The same discipline, wherever you sit</h2>
+            <h2 className="md:w-[21ch] mb-8">The same discipline, wherever you sit</h2>
 
-            <div className="cards grid md:grid-cols-2 gap-4 mx-20 mt-8 [&_.card]:p-10 [&_.card]:rounded-2xl">
-                <div className="card border">
+            <div className="cards grid gap-4 mx-20 md:mx-80 mt-8 [&_.card]:p-10 [&_.card]:rounded-2xl [&_.card]:bg-[#c1f063]">
+                <div className="card border-2">
                     <p>Whether it's a ministry tender, a mine site's PPE order, or a school's stationery contract the process is the same: understand urgency, source smartly, deliver on time</p>
                 </div>
-                <div className="card border">
+                <div className="card border-2">
                     <p>Our four divisions flex to whatever combination your sector actually needs, not a fixed package</p>
                 </div>
             </div>
         </div>
 
         <div className="closing text-center grid place-items-center py-15">
-            <h2 className="md:w-[23ch]">Don't see your sector listed? We likely still serve it</h2>
+            <h2 className="md:w-[23ch] mb-8">Don't see your sector listed? We likely still serve it</h2>
+
               <Link to="/contact">
-                  <p className="bg-white mt-8">Ask us directly</p>
+                  <Button styles="w-fit font-[500] bg-[#c1f063]! flex hover:bg-[#29340b]!">
+                      Ask us directly
+                      <ChevronRight />
+                  </Button>
               </Link>
         </div>
     </section>

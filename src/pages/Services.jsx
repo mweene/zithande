@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, ChevronUp, ChevronRight } from "lucide-react";
+import { ChevronDown, ChevronUp, ChevronRight, ChevronLeft } from "lucide-react";
 import Button from "../components/Button.jsx";
 
 export default function Services() {
@@ -104,14 +104,16 @@ export default function Services() {
             </ul>
         </div>
 
-        <div className="flexible md:p-15 md:py-20 my-20 bg-white grid">
-            <h2 className="text-center">
-                Flexible contracting
-            </h2>
+        <div className="flexible md:p-15 md:py-20 my-20 bg-white flex gap-8">
+            <div className="">
+                <h2 className="">
+                    Flexible contracting
+                </h2>
+            </div>
 
             <div className={`
-                cards mt-6 grid md:grid-cols-3 gap-4 [&_.card]:border
-                [&_.card]:rounded-3xl [&_.card]:p-10 [&_.card]:bg-[#eef7dc]
+                cards mt-6 grid md:grid-cols-3 gap-4 [&_.card]:border-2
+                [&_.card]:rounded-3xl [&_.card]:p-10 [&_.card]:bg-[#c1f063]
             `}>
                 <div className="card">
                     <h3>One-off supply</h3>

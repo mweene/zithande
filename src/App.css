@@ -44,7 +44,6 @@ button {
 }
 
 button:hover {
-    background-color: yellowgreen !important;
     transform: translateY(-3px);
 }
 
@@ -287,13 +286,13 @@ nav .menu button {
 }
 
 .industries-page .ten-industries-cards .card:nth-child(odd) {
-    background-color: #BCD979;
-    border: 1px solid #91a85d;
+    background-color: #c1f063;
+    border: 2px solid #29340b;
 }
 
 .industries-page .ten-industries-cards .card:nth-child(even) {
     background-color: #fff;
-    border: 1px solid #bec2b5;
+    border: 2px solid #29340b;
 }
 
 .services ul li h3 {
@@ -316,6 +315,15 @@ nav .menu button {
 .about-page .values .pills .pill {
     font-size: 1.15rem;
     color: #141905;
+}
+
+.contact-details .cell p {
+    font-size: 1rem;
+    color: #141905;
+}
+
+.contact-details .cell h3 {
+    font-size: 3rem;
 }
 
 @keyframes scroll {
