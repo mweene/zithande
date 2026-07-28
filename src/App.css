@@ -122,6 +122,9 @@ nav .menu button {
 .home .hero .image {
     margin-top: 1rem;
     border-radius: 1rem;
+    background-image: url("assets/zithande.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .sectors {

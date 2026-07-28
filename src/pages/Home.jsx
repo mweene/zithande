@@ -59,7 +59,7 @@ export default function Home() {
                         </Link>
                     </div>
                 </div>
-                <div className="image mt-6 h-80 md:h-128 md:mx-40 bg-[#c1f063]">
+                <div className="image h-100 md:mx-40">
                 </div>
             </div>
 
