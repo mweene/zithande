@@ -44,7 +44,7 @@ export default function Services() {
     ];
 
     const handleActiveDivision = (id) => {
-        setActiveDivision(id);
+        (id === activeDivision) ? setActiveDivision(null) : setActiveDivision(id)
     }
 
   return (

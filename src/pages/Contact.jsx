@@ -3,7 +3,7 @@ import { MapPin, Phone, Mail, CircleStar, ChevronDown } from "lucide-react";
 export default function Contact() {
   return (
     <section className="contact">
-        <div className="hero-text text-center grid place-items-center py-16">
+        <div className="hero-text text-center grid place-items-center py-16 px-4">
             <p className="tagline">Contact</p>
             <h1 className="md:w-[20ch]">Reach our procurement team directly</h1>
             <p className="md:w-[55ch] mt-4">Send your requirements and we'll respond with a quote or a call, whichever moves things faster</p>
