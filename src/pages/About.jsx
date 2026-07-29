@@ -43,15 +43,15 @@ export default function About() {
     ]
   return (
     <section className="about-page text-center">
-        <div className="about-hero grid place-items-center py-16">
+        <div className="about-hero grid place-items-center px-4 py-16 ">
             <p className="tagline">About us</p>
             <h1 className="md:w-[23ch]">A Zambian, women-led enterprise built on trust</h1>
             <p className="md:w-[55ch] mt-4">Built on a legacy of integrity, resilience and service excellence evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients</p>
         </div>
 
-        <div className="vision md:flex gap-8 mt-15 bg-white md:p-20 md:px-28">
+        <div className="vision md:flex gap-8 mt-15 bg-white p-4 md:p-20 md:px-28">
             <h2>Our Vision & Mission</h2>
-            <div className="columns text-left [&_.text]:p-8 [&_.text]:rounded-xl grid gap-4 [&_span]:font-black [&_.text]:w-160">
+            <div className="columns text-left [&_.text]:p-8 [&_.text]:rounded-xl grid gap-4 [&_span]:font-black md:[&_.text]:w-160">
                 <div className="text bg-[#c1f063] border-2">
                     <h3 className="mb-2">Vision</h3>
                     <p className="italic"><span>"</span>Built on a legacy of integrity, resilience and service excellence  evolved into a multi-service enterprise for government, private sector, NGOs, mining, education, healthcare and commercial clients.<span>"</span></p>
@@ -82,13 +82,13 @@ export default function About() {
             </div>
         </div>
 
-        <div className="leadership grid place-items-center bg-white py-20">
+        <div className="leadership grid place-items-center bg-white py-20 px-4">
             <h2>Our Leadership</h2>
             <p className="md:w-[55ch] mt-4">Zithande Limited is committed to responsible governance, and continues to strengthen its board advisory structure, compliance framework and reporting standards.</p>
 
-              <div className="cards mt-8 mx-15 grid gap-8 w-4xl">
+              <div className="cards mt-8 mx-15 grid gap-8 md:w-4xl">
                 {leadership.map(leader => (
-                    <div key={leader.id} className="card border border-[#e2e4df] grid rounded-2xl h-100 bg-[#f2f3f1]">
+                    <div key={leader.id} className="card border border-[#e2e4df] grid rounded-2xl md:h-100 bg-[#f2f3f1]">
                         <div className="image bg-white m-2 rounded-xl">
                         </div>
                         <div className="content px-4 py-8 grid">
@@ -104,7 +104,7 @@ export default function About() {
             </div>
         </div>
 
-        <div className="internship grid place-items-center md:p-15 md:pt-20">
+        <div className="internship grid place-items-center p-4 md:p-15 md:pt-20">
             <h2 className="md:w-[23ch]">Youth empowerment through internship & seasonal work</h2>
 
             <div className="cards grid gap-4 mt-8 text-left [&_.card]:border-2 [&_.card]:bg-[#c1f063] [&_.card]:rounded-2xl md:mx-60">
@@ -122,7 +122,7 @@ export default function About() {
         </div>
 
         <div className="partnership bg-white grid place-content-center place-items-center py-16">
-            <h2 className="md:w-[23ch] mb-8">Discuss a partnership with our leadership team</h2>
+            <h2 className="md:w-[23ch] mb-8 px-4">Discuss a partnership with our leadership team</h2>
               <Link to="/contact">
                 <Button styles="w-fit font-[500] bg-[#c1f063]! flex hover:bg-[#29340b]!">
                     Contact Zithande

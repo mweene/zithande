@@ -9,12 +9,12 @@ export default function Footer() {
 
     return (
         <footer className="border-t-2 px-10 py-8">
-            <section className="top flex place-items-baseline place-content-between">
+            <section className="top grid gap-6 md:flex md:place-items-baseline md:place-content-between">
                 <Link to="/">
-                    <img src={Logo} alt="logo" className="h-[4rem] w-fit" />
+                    <img src={Logo} alt="logo" className="h-16 w-fit" />
                 </Link>
 
-                <ul className="flex gap-4">
+                <ul className="grid md:flex gap-4">
                     <li>
                         <Link to="/">Home</Link>
                     </li>

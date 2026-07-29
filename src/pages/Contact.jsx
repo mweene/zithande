@@ -9,10 +9,10 @@ export default function Contact() {
             <p className="md:w-[55ch] mt-4">Send your requirements and we'll respond with a quote or a call, whichever moves things faster</p>
         </div>
 
-        <div className="contact-details md:p-15 md:px-40 bg-white">
+        <div className="contact-details p-4 md:p-15 md:px-40 bg-white">
               <div className="grid md:grid-cols-2 border-2 rounded-3xl bg-[#c3ef6d]">
-                  <div className="form bg-[#f0ffd2] p-8 rounded-2xl m-2">
-                      <form className="grid gap-4 [&_label]:grid [&_input]:bg-[#cddab0] [&_input]:rounded-lg [&_input]:p-3">
+                  <div className="form bg-white p-8 rounded-2xl m-2">
+                      <form className="grid gap-4 [&_label]:grid [&_input]:bg-[#e8e9e6] [&_input]:rounded-lg [&_input]:p-3">
                           <label htmlFor="name">
                               Name
                               <input type="text" id="name" placeholder="enter full name"/>
@@ -35,7 +35,7 @@ export default function Contact() {
                               <select
                                   id="questions"
                                   defaultValue="general-supply"
-                                  className="p-4 py-3 bg-[#cddab0] rounded-xl w-full appearance-none pr-10  focus:border-[#1b2307] focus:ring-2 focus:ring-slate-200"
+                                  className="p-4 py-3 bg-[#e8e9e6] rounded-xl w-full appearance-none pr-10  focus:border-[#1b2307] focus:ring-2 focus:ring-slate-200"
                               >
                                   <option value="">--Please choose an option--</option>
                                   <option value="general-supply">General supply</option>

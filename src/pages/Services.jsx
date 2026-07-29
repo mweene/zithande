@@ -49,7 +49,7 @@ export default function Services() {
 
   return (
     <section className="services">
-        <div className="four-divisions text-center grid place-items-center py-16">
+        <div className="four-divisions text-center grid place-items-center py-16 px-4">
             <p className="tagline">
                 Core business divisions
             </p>
@@ -61,7 +61,7 @@ export default function Services() {
             </p>
         </div>
 
-        <div className="list grid place-content-center">
+        <div className="list grid place-content-center px-4">
             <ul className="grid gap-2 md:w-200 [&_li]:cursor-pointer [&_li]:rounded-2xl rounded-3xl border-2 p-4 bg-white">
             {divisions.map((division) => {
               const isOpen = division.id === activeDivision;
@@ -104,7 +104,7 @@ export default function Services() {
             </ul>
         </div>
 
-        <div className="flexible md:p-15 md:py-20 my-20 bg-white flex gap-8">
+        <div className="flexible px-4 md:p-15 md:py-20 my-20 bg-white md:flex gap-8">
             <div className="">
                 <h2 className="">
                     Flexible contracting

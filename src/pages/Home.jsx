@@ -47,15 +47,14 @@ export default function Home() {
                         We provide reliable procurement, supply chain solutions, branding, and business support. Serving institutions across Zambia with consistency and trust.
                     </p>
 
-                    <div className="ctas grid md:flex gap-3 md:place-content-center mt-4 w-full">
-                        <Link to="/contact">
-                            <Button type={'primary'} styles={'flex place-items-center place-content-center gap-1'}>
-                                Request a qoute
-                                <ChevronRight size={20} />
-                            </Button>
+                    <div className="ctas flex flex-col md:flex-row gap-4 md:place-content-center mt-4 w-full">
+                        <Link to="/contact" className="bg-[#29340b] rounded-full p-4 md:px-6 flex place-items-center place-content-center gap-1">
+                            <span className="text-white">Request a qoute</span>
+                            <ChevronRight size={20} color="white" />
                         </Link>
-                        <Link to="/services">
-                            <Button>View our services</Button>
+
+                        <Link to="/services" className="border-2 rounded-full p-4 md:px-6">
+                            View our services
                         </Link>
                     </div>
                 </div>
@@ -117,27 +116,30 @@ export default function Home() {
 
 
             <div className="track-record my-16 py-12 px-6 grid md:px-60">
-                <div className="track-record-top flex gap-8 place-items-end mb-15">
+                <div className="track-record-top md:flex gap-8 place-items-end mb-15">
                     <div className="text">
                         <h2 className="mb-4">A track record built on consistency</h2>
-                        <p className="">
-                            We are relationship	driven,	not	transactional
-                            structured for long-term supply agreements, not one-off orders
-                        </p>
-                    </div>
-                    <div className="buttons flex gap-4 h-fit">
-                        <button
-                            onClick={handlePrev}
-                            className={`border-2 border-[#29340b] bg-[#c1f063]! p-2 rounded-full`}
-                        >
-                            <ChevronLeft color="#29340b" />
-                        </button>
-                        <button
-                            onClick={handleNext}
-                            className="border-2 border-[#29340b] bg-[#c1f063]! p-2 rounded-full"
-                        >
-                            <ChevronRight color="#29340b"/>
-                        </button>
+                        <div className="flex gap-4">
+                            <p className="">
+                                We are relationship	driven,	not	transactional
+                                structured for long-term supply agreements, not one-off orders
+                            </p>
+
+                            <div className="buttons self-end flex gap-4 h-fit">
+                                <button
+                                    onClick={handlePrev}
+                                    className={`border-2 border-[#29340b] bg-[#c1f063]! p-2 rounded-full`}
+                                >
+                                    <ChevronLeft color="#29340b" />
+                                </button>
+                                <button
+                                    onClick={handleNext}
+                                    className="border-2 border-[#29340b] bg-[#c1f063]! p-2 rounded-full"
+                                >
+                                    <ChevronRight color="#29340b"/>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
