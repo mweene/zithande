@@ -35,7 +35,7 @@ export default function Home() {
     }
     return (
         <section className="home">
-            <div className="hero bg-[#f0f4ea]">
+            <div className="hero bg-[#f2f2ed]">
                 <div className="text text-center grid place-items-center">
                     <p className="tagline">
                         Zambian owned Female led Est.2011
@@ -48,21 +48,21 @@ export default function Home() {
                     </p>
 
                     <div className="ctas flex flex-col md:flex-row gap-4 md:place-content-center mt-4 w-full">
-                        <Link to="/contact" className="bg-[#1e2608] rounded-full p-3 py-[1.1rem] md:px-6 flex place-items-center place-content-center gap-1">
+                        <Link to="/contact" className="bg-[#02261a] rounded-full p-3 py-[1.1rem] md:px-6 flex place-items-center place-content-center gap-1">
                             <span className="text-white">Request a qoute</span>
                             <ChevronRight size={20} color="white" />
                         </Link>
 
-                        <Link to="/services" className="border-2 rounded-full p-3 py-[1.1rem] md:px-6">
+                        <Link to="/services" className="border-2 border-[#02261a] rounded-full p-3 py-[1.1rem] md:px-6">
                             View our services
                         </Link>
                     </div>
                 </div>
-                <div className="image md:bg-contain bg-auto bg-center h-100 md:mx-40">
+                <div className="image md:bg-contain bg-cover bg-center h-100 md:mx-40">
                 </div>
             </div>
 
-            <div className="sectors pt-16 pb-16 bg-[#f0f4ea]">
+            <div className="sectors pt-16 pb-16 bg-[#f2f2ed]">
                 <p className="text-center mb-4">Sectors we serve</p>
                 <div className="cards slider">
                     {sectorCards.map((c, i) => (
@@ -116,7 +116,7 @@ export default function Home() {
 
 
 
-            <div className="track-record my-16 py-12 px-6 grid md:px-60 bg-[#f0f4ea]">
+            <div className="track-record my-16 py-12 px-6 grid md:px-60 bg-[#f2f2ed]">
                 <div className="track-record-top md:flex gap-8 place-items-end mb-15">
                     <div className="text">
                         <h2 className="mb-4">A track record built on consistency</h2>
@@ -184,7 +184,7 @@ export default function Home() {
 
 
 
-            <div className="compliance my-16 py-12 px-6 text-center grid place-content-center bg-[#f0f4ea]">
+            <div className="compliance my-16 py-12 px-6 text-center grid place-content-center bg-[#f2f2ed]">
                 <h2>Registred, Cleared, Accountable</h2>
                 <div className="badges text-center mt-8 grid gap-2 [&_.badge]:rounded-2xl [&_.badge]:py-4 [&_.badge]:px-8 place-self-center">
                     <div className="badge flex gap-2 place-items-cener border-2 bg-[#f8ffe6] text-[#1e2608] relative overflow-clip z-1">
@@ -196,18 +196,20 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="in-touch bg-white grid place-content-center place-items-center p-4 py-10 md:p-15 text-center">
-                <h2 className="md:w-[23ch] mb-8">
-                    Discuss your procurement
-                    requirements with our team
-                </h2>
+            <div className="in-touch bg-[#02261a] grid place-content-center p-4 py-10 md:p-15 text-center">
+                <div className="m:mx-20 md:m-10 p-10 rounded-3xl grid place-items-center ">
+                    <h2 className="md:w-[23ch] mb-8 text-white!">
+                        Discuss your procurement
+                        requirements with our team
+                    </h2>
 
-                <Link to="/contact">
-                    <Button styles="w-fit font-[500] bg-[#c1f063]! flex">
-                        Get in touch
-                        <ChevronRight />
-                    </Button>
-                </Link>
+                    <Link to="/contact">
+                        <Button styles="w-fit font-[500] border-[#c1f063] bg-[#c1f063]! flex">
+                            Get in touch
+                            <ChevronRight />
+                        </Button>
+                    </Link>
+                </div>
             </div>
         </section>
     );

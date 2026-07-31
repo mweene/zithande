@@ -6,19 +6,19 @@
 .tagline {
     font-size: .9rem;
     font-weight: 600;
-    border: 1px solid #1e260875;
+    border: 1px solid #02261a75;
     border-radius: 1rem;
     width: fit-content;
     padding: .125rem 1rem;
     margin-bottom: 1rem;
     background-color: #eaffb2bd;
-    color: #1e2608;
+    color: #02261a;
 }
 
 h1,h2,h3 {
     line-height: 1.1;
     font-weight: 700;
-    color: #1e2608;
+    color: #02261a;
 }
 
 h2 {
@@ -38,7 +38,7 @@ button {
     font-size: .95rem;
     font-weight: 600;
     background-color: transparent;
-    border: 2px solid #1e2608;
+    border: 2px solid #02261a;
     cursor: pointer;
     transition: background-color .3s ease, transform .3s ease;
 }
@@ -87,7 +87,7 @@ nav li span {
     font-size: 2rem;
     font-weight: 500;
     width: 100%;
-    color: #29340b;
+    color: #02261a;
 }
 
 nav .nav-menu {
@@ -146,11 +146,11 @@ nav .menu button {
     flex-shrink: 0;
     background-color: #c1f063;
     border-radius: 1rem;
-    border: 2px solid #1e2608;
+    border: 2px solid #02261a;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 1.15rem;
-    color: #1e2608;
+    color: #02261a;
 }
 
 .value-pillars .cards {
@@ -238,7 +238,7 @@ nav .menu button {
     padding: 2rem;
     background-color: #c1f063;
     border-radius: 1rem;
-    border: 2px solid #1e2608;
+    border: 2px solid #02261a;
 }
 
 .four-divisions .cards .card:nth-child(1){
@@ -294,7 +294,7 @@ nav .menu button {
 
 .industries-page .ten-industries-cards .card:nth-child(even) {
     background-color: #fff;
-    border: 2px solid #1e2608;
+    border: 2px solid #02261a;
 }
 
 .services ul li h3 {
@@ -347,6 +347,10 @@ nav .menu button {
 @media screen and (max-width: 1200px) {
     h1 {
         font-size: 45px;
+    }
+
+    .hero .image {
+        background-size: cover !important;
     }
 
     .about-page .vision {

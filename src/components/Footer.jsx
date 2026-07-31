@@ -40,7 +40,7 @@ export default function Footer() {
                     <li>
                         <img src={X} alt="twitter"/>
                     </li>
-                    <li className="text-red-600">
+                    <li className="">
                         <img src={Instagram} alt="instagram"/>
                     </li>
                 </ul>
