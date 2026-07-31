@@ -8,7 +8,7 @@ export default function Footer() {
     const color = '#29340b'
 
     return (
-        <footer className="border-t-2 px-10 py-8">
+        <footer className="border-t-2 px-10 py-8 grid place-content-center text-center">
             <section className="top grid gap-6 md:flex md:place-items-baseline md:place-content-between">
                 <Link to="/">
                     <img src={Logo} alt="logo" className="h-20 md:h-16 w-fit" />
