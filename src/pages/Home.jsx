@@ -48,21 +48,22 @@ export default function Home() {
                     </p>
 
                     <div className="ctas flex flex-col md:flex-row gap-4 md:place-content-center mt-4 w-full">
-                        <Link to="/contact" className="bg-[#29340b] rounded-full p-4 md:px-6 flex place-items-center place-content-center gap-1">
+                        <Link to="/contact" className="bg-[#1e2608] rounded-full p-3 py-[1.1rem] md:px-6 flex place-items-center place-content-center gap-1">
                             <span className="text-white">Request a qoute</span>
                             <ChevronRight size={20} color="white" />
                         </Link>
 
-                        <Link to="/services" className="border-2 rounded-full p-4 md:px-6">
+                        <Link to="/services" className="border-2 rounded-full p-3 py-[1.1rem] md:px-6">
                             View our services
                         </Link>
                     </div>
                 </div>
-                <div className="image h-100 md:mx-40">
+                <div className="image md:bg-contain bg-auto bg-center h-100 md:mx-40">
                 </div>
             </div>
 
             <div className="sectors mt-16 pb-16">
+                <p className="text-center mb-4">Sectors we serve</p>
                 <div className="cards slider">
                     {sectorCards.map((c, i) => (
                         <div className="card" key={i}>{c}</div>
@@ -73,7 +74,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="value-pillars bg-[#f8ffe6] py-20 px-6 md:px-15">
+            <div className="value-pillars bg-white py-20 px-6 md:px-15">
                 <div className="text-center grid place-items-center">
                     <h2 className="md:w-[20ch]">
                         What institutional buyers require from a supplier
@@ -128,13 +129,13 @@ export default function Home() {
                             <div className="buttons self-end flex gap-4 h-fit">
                                 <button
                                     onClick={handlePrev}
-                                    className={`border-2 border-[#29340b] bg-[#c1f063]! p-2 rounded-full`}
+                                    className={`border-2 border-[#1e2608] bg-[#c1f063]! p-2 rounded-full`}
                                 >
                                     <ChevronLeft color="#29340b" />
                                 </button>
                                 <button
                                     onClick={handleNext}
-                                    className="border-2 border-[#29340b] bg-[#c1f063]! p-2 rounded-full"
+                                    className="border-2 border-[#1e2608] bg-[#c1f063]! p-2 rounded-full"
                                 >
                                     <ChevronRight color="#29340b"/>
                                 </button>
@@ -148,14 +149,14 @@ export default function Home() {
                 `}>
                     <div
                         key={trackRecords[trackRecord].id}
-                        className="card bg-[#c1f063] border-2 border-[#29340b] p-12 rounded-2xl text-center md:h-60 w-full"
+                        className="card bg-[#c1f063] border-2 border-[#1e2608] p-6 md:p-12 rounded-2xl text-center md:h-60 w-full"
                     >
-                        <h3 className="">{trackRecords[trackRecord].header}</h3>
+                        <h3 className="mb-4">{trackRecords[trackRecord].header}</h3>
                         <p className="mt-2 text-[#29340b]!">{trackRecords[trackRecord].paragraph}</p>
                     </div>
                 </div>
                 <Link to="about">
-                    <p className="flex items-center gap-1 mt-8 text-[#29340b] underline">
+                    <p className="flex items-center gap-1 mt-8 text-[#1e2608] underline">
                         Meet the leadership
                         <ChevronRight size={17}/>
                     </p>
@@ -164,7 +165,7 @@ export default function Home() {
 
 
 
-            <div className="four-divisions py-20 px-6 bg-[#f8ffe6] text-center grid place-content-center">
+            <div className="four-divisions py-20 px-6 bg-white text-center grid place-content-center">
                 <h2 className="mb-4">Four divisions, one supplier</h2>
 
                 <div className="cards grid md:grid-cols-2 gap-2 w-4/5 place-self-center">
@@ -186,18 +187,16 @@ export default function Home() {
             <div className="compliance my-16 py-12 px-6 text-center grid place-content-center">
                 <h2>Registred, Cleared, Accountable</h2>
                 <div className="badges text-center mt-8 grid gap-2 [&_.badge]:rounded-2xl [&_.badge]:py-4 [&_.badge]:px-8 place-self-center">
-                    <div className="badge flex gap-2 place-items-cener border-2 bg-[#f8ffe6] text-[#29340b] relative overflow-clip z-1">
-                        <Award color="#d4f09c" size={80} className="absolute inset-0 mt-10 -z-1"/>
+                    <div className="badge flex gap-2 place-items-cener border-2 bg-[#f8ffe6] text-[#1e2608] relative overflow-clip z-1">
                         ZRA Tax Clearance Certificate
                     </div>
-                    <div className="badge flex gap-2 place-items-center border-2 bg-[#f8ffe6] text-[#29340b] relative overflow-clip z-1">
-                        <Award color="#d4f09c" size={80} className="absolute right-0 mt-22 -z-1"/>
+                    <div className="badge flex gap-2 place-items-center border-2 bg-[#f8ffe6] text-[#1e2608] relative overflow-clip z-1">
                         Certificate of Incorporation
                     </div>
                 </div>
             </div>
 
-            <div className="in-touch bg-white grid place-content-center place-items-center p-15 text-center">
+            <div className="in-touch bg-white grid place-content-center place-items-center p-4 py-10 md:p-15 text-center">
                 <h2 className="md:w-[23ch] mb-8">
                     Discuss your procurement
                     requirements with our team

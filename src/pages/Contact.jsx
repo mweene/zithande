@@ -21,7 +21,7 @@ export default function Contact() {
 
                           <label htmlFor="name">
                               Name
-                              <input type="text" id="name" placeholder="enter full name"/>
+                              <input type="text" id="name" placeholder="enter full name" required/>
                           </label>
                           <label htmlFor="phone">
                               Phone
@@ -29,7 +29,7 @@ export default function Contact() {
                           </label>
                           <label htmlFor="email">
                               Email
-                              <input type="email" id="email" placeholder="enter email"/>
+                              <input type="email" id="email" placeholder="enter email" required/>
                           </label>
                           <label htmlFor="organisation">
                               Organisation

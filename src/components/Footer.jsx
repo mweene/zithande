@@ -11,7 +11,7 @@ export default function Footer() {
         <footer className="border-t-2 px-10 py-8">
             <section className="top grid gap-6 md:flex md:place-items-baseline md:place-content-between">
                 <Link to="/">
-                    <img src={Logo} alt="logo" className="h-16 w-fit" />
+                    <img src={Logo} alt="logo" className="h-20 md:h-16 w-fit" />
                 </Link>
 
                 <ul className="grid md:flex gap-4">
@@ -40,7 +40,7 @@ export default function Footer() {
                     <li>
                         <img src={X} alt="twitter"/>
                     </li>
-                    <li>
+                    <li className="text-red-600">
                         <img src={Instagram} alt="instagram"/>
                     </li>
                 </ul>

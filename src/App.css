@@ -6,19 +6,19 @@
 .tagline {
     font-size: .9rem;
     font-weight: 600;
-    border: 1px solid #d0f176;
+    border: 1px solid #1e260875;
     border-radius: 1rem;
     width: fit-content;
     padding: .125rem 1rem;
     margin-bottom: .5rem;
     background-color: #eaffb2bd;
-    color: #596a2e;
+    color: #1e2608;
 }
 
 h1,h2,h3 {
     line-height: 1.1;
     font-weight: 700;
-    color: #29340b;
+    color: #1e2608;
 }
 
 h2 {
@@ -31,14 +31,14 @@ p {
 }
 
 a {
-    color: #29340b;
+    color: #1e2608;
 }
 
 button {
     font-size: .95rem;
     font-weight: 600;
     background-color: transparent;
-    border: 2px solid #29340b;
+    border: 2px solid #1e2608;
     cursor: pointer;
     transition: background-color .3s ease, transform .3s ease;
 }
@@ -111,7 +111,7 @@ nav .menu button {
 }
 
 .home .hero h1 {
-    font-size: 52.5px;
+    font-size: 44px;
     font-weight: 800;
 }
 
@@ -147,11 +147,11 @@ nav .menu button {
     flex-shrink: 0;
     background-color: #c1f063;
     border-radius: 1rem;
-    border: 2px solid #29340b;
+    border: 2px solid #1e2608;
     text-transform: capitalize;
     font-weight: 600;
     font-size: 1.15rem;
-    color: #181e06;
+    color: #1e2608;
 }
 
 .value-pillars .cards {
@@ -174,7 +174,7 @@ nav .menu button {
 
 .value-pillars .card:nth-child(1) {
     background:
-        linear-gradient(1deg, #0d1103, #1b23071c),
+        linear-gradient(1deg, #0d1103, transparent),
         url("assets/dependable.jpg");
     background-size: cover;
     background-position: center center;
@@ -182,7 +182,7 @@ nav .menu button {
 
 .value-pillars .card:nth-child(2) {
     background:
-        linear-gradient(1deg, #0d1103, #1b23071c),
+        linear-gradient(1deg, #0d1103, transparent),
         url("assets/timely.jpg");
     background-size: cover;
     background-position: center center;
@@ -190,7 +190,7 @@ nav .menu button {
 
 .value-pillars .card:nth-child(3) {
     background:
-        linear-gradient(1deg, #0d1103, #1b23071c),
+        linear-gradient(1deg, #0d1103, transparent),
         url("assets/branded2.jpg");
     background-size: cover;
     background-position: center center;
@@ -198,14 +198,14 @@ nav .menu button {
 
 .value-pillars .card:nth-child(4) {
     background:
-        linear-gradient(1deg, #0d1103, #1b23071c),
+        linear-gradient(1deg, #0d1103, transparent),
         url("assets/contracts.jpg");
     background-size: cover;
     background-position: center center;
 }
 
 .value-pillars .cards h2 {
-    color: #eef7dc;
+    color: #fff;
 }
 
 .value-pillars .cards img {
@@ -219,7 +219,7 @@ nav .menu button {
 }
 
 .value-pillars .cards h3 {
-    color: #f8ffe6;
+    color: #fff;
 }
 
 .track-record h3 {
@@ -239,7 +239,7 @@ nav .menu button {
     padding: 2rem;
     background-color: #c1f063;
     border-radius: 1rem;
-    border: 2px solid #29340b;
+    border: 2px solid #1e2608;
 }
 
 .four-divisions .cards .card:nth-child(1){
@@ -290,12 +290,12 @@ nav .menu button {
 
 .industries-page .ten-industries-cards .card:nth-child(odd) {
     background-color: #c1f063;
-    border: 2px solid #29340b;
+    border: 2px solid #1e2608;
 }
 
 .industries-page .ten-industries-cards .card:nth-child(even) {
     background-color: #fff;
-    border: 2px solid #29340b;
+    border: 2px solid #1e2608;
 }
 
 .services ul li h3 {
@@ -347,7 +347,7 @@ nav .menu button {
 
 @media screen and (max-width: 1200px) {
     h1 {
-        font-size: 49px;
+        font-size: 45px;
     }
 
     .about-page .vision {

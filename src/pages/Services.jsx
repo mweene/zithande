@@ -104,9 +104,9 @@ export default function Services() {
             </ul>
         </div>
 
-        <div className="flexible px-4 md:p-15 md:py-20 my-20 bg-white md:flex gap-8">
+        <div className="flexible px-4 md:p-15 md:py-20 my-20 bg-white gap-8">
             <div className="">
-                <h2 className="">
+                <h2 className="text-center">
                     Flexible contracting
                 </h2>
             </div>
