@@ -35,7 +35,7 @@ export default function Home() {
     }
     return (
         <section className="home">
-            <div className="hero">
+            <div className="hero bg-[#f0f4ea]">
                 <div className="text text-center grid place-items-center">
                     <p className="tagline">
                         Zambian owned Female led Est.2011
@@ -62,7 +62,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="sectors mt-16 pb-16">
+            <div className="sectors pt-16 pb-16 bg-[#f0f4ea]">
                 <p className="text-center mb-4">Sectors we serve</p>
                 <div className="cards slider">
                     {sectorCards.map((c, i) => (
@@ -116,7 +116,7 @@ export default function Home() {
 
 
 
-            <div className="track-record my-16 py-12 px-6 grid md:px-60">
+            <div className="track-record my-16 py-12 px-6 grid md:px-60 bg-[#f0f4ea]">
                 <div className="track-record-top md:flex gap-8 place-items-end mb-15">
                     <div className="text">
                         <h2 className="mb-4">A track record built on consistency</h2>
@@ -184,7 +184,7 @@ export default function Home() {
 
 
 
-            <div className="compliance my-16 py-12 px-6 text-center grid place-content-center">
+            <div className="compliance my-16 py-12 px-6 text-center grid place-content-center bg-[#f0f4ea]">
                 <h2>Registred, Cleared, Accountable</h2>
                 <div className="badges text-center mt-8 grid gap-2 [&_.badge]:rounded-2xl [&_.badge]:py-4 [&_.badge]:px-8 place-self-center">
                     <div className="badge flex gap-2 place-items-cener border-2 bg-[#f8ffe6] text-[#1e2608] relative overflow-clip z-1">

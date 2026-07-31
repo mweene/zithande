@@ -10,7 +10,7 @@
     border-radius: 1rem;
     width: fit-content;
     padding: .125rem 1rem;
-    margin-bottom: .5rem;
+    margin-bottom: 1rem;
     background-color: #eaffb2bd;
     color: #1e2608;
 }
@@ -111,7 +111,6 @@ nav .menu button {
 }
 
 .home .hero h1 {
-    font-size: 44px;
     font-weight: 800;
 }
 
