@@ -35,35 +35,31 @@ export default function Home() {
     }
     return (
         <section className="home">
-            <div className="hero bg-[#f2f2ed]">
-                <div className="text text-center grid place-items-center">
+            <div className="hero bg-cover bg-top-left md:bg-center bg-no-repeat h-[110dvh] grid">
+                <div className="text ml-4 mb-18 self-end">
                     <p className="tagline">
                         Zambian owned Female led Est.2011
                     </p>
-                    <h1 className="md:w-[20ch]">
+                    <h1 className="md:w-[20ch] text-white!">
                         Dependable Procurement for Institutions
                     </h1>
-                    <p className="lead md:w-[65ch]">
+                    <p className="lead md:w-[65ch] text-[#b8b8b8]!">
                         We provide reliable procurement, supply chain solutions, branding, and business support. Serving institutions across Zambia with consistency and trust.
                     </p>
 
-                    <div className="ctas flex flex-col md:flex-row gap-4 md:place-content-center mt-4 w-full">
-                        <Link to="/contact" className="bg-[#02261a] rounded-full p-3 py-[1.1rem] md:px-6 flex place-items-center place-content-center gap-1">
-                            <span className="text-white">Request a qoute</span>
-                            <ChevronRight size={20} color="white" />
+                    <div className="ctas flex flex-col md:flex-row gap-4 mt-8 w-full">
+                        <Link to="/contact" className="bg-white rounded-full p-3 py-[.7rem] md:px-6 flex place-items-center place-content-center gap-1 md:w-fit">
+                            <span className="text-black">Request a qoute</span>
+                            <ChevronRight size={20} color="black" />
                         </Link>
 
-                        <Link to="/services" className="border-2 border-[#02261a] rounded-full p-3 py-[1.1rem] md:px-6">
+                        <Link to="/services" className="border-2 border-[#625f5e] text-[#c3c3c3] rounded-full p-3 py-[.7rem] md:px-6 md:w-fit">
                             View our services
                         </Link>
                     </div>
                 </div>
-                <div className="image md:bg-contain bg-cover bg-center h-100 md:mx-40">
-                </div>
             </div>
-
-            <div className="sectors pt-16 pb-16 bg-[#f2f2ed]">
-                <p className="text-center mb-4">Sectors we serve</p>
+            <div className="sectors pt-25 pb-10 bg-white">
                 <div className="cards slider">
                     {sectorCards.map((c, i) => (
                         <div className="card" key={i}>{c}</div>
@@ -73,6 +69,7 @@ export default function Home() {
                     ))}
                 </div>
             </div>
+
 
             <div className="value-pillars bg-white py-20 px-6 md:px-15">
                 <div className="text-center grid place-items-center">

@@ -24,8 +24,8 @@ export default function Navbar() {
     }, [isMenuOpen]);
 
     return (
-        <nav className="relative bg-white border-b border-[#dfe3d6]">
-            <div className="flex place-content-between place-items-center py-3 px-10">
+        <nav className="bg-black/90 border-b border-white/15 fixed w-full z-50">
+            <div className="flex place-content-between place-items-center py-3 px-10 backdrop-blur-2xl">
                 <Link to="/">
                     <img src={Logo} alt="logo" className="h-14" />
                 </Link>
