@@ -34,9 +34,9 @@ export default function Home() {
         }
     }
     return (
-        <section className="home">
-            <div className="hero bg-cover bg-top-left md:bg-center bg-no-repeat h-[110dvh] grid">
-                <div className="text ml-4 mb-18 self-end">
+        <section className="home pt-10 md:pt-20">
+            <div className="hero bg-cover bg-top-left md:bg-center bg-no-repeat h-dvh grid">
+                <div className="text ml-4 mb-18 self-center">
                     <p className="tagline">
                         Zambian owned Female led Est.2011
                     </p>
@@ -59,7 +59,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="sectors pt-25 pb-10 bg-white">
+            <div className="sectors pt-10 pb-10 bg-white">
                 <div className="cards slider">
                     {sectorCards.map((c, i) => (
                         <div className="card" key={i}>{c}</div>
@@ -71,7 +71,7 @@ export default function Home() {
             </div>
 
 
-            <div className="value-pillars bg-white py-20 px-6 md:px-15">
+            <div className="value-pillars bg-white py-25 px-6 md:px-15">
                 <div className="text-center grid place-items-center">
                     <h2 className="md:w-[20ch]">
                         What institutional buyers require from a supplier
@@ -113,12 +113,12 @@ export default function Home() {
 
 
 
-            <div className="track-record my-16 py-12 px-6 grid md:px-60 bg-[#f2f2ed]">
+            <div className="track-record py-20 px-6 grid md:px-60 bg-[#02261a]">
                 <div className="track-record-top md:flex gap-8 place-items-end mb-15">
                     <div className="text">
-                        <h2 className="mb-4">A track record built on consistency</h2>
+                        <h2 className="mb-4 text-white!">A track record built on consistency</h2>
                         <div className="flex gap-4">
-                            <p className="">
+                            <p className="text-white/70!">
                                 We are relationship	driven,	not	transactional
                                 structured for long-term supply agreements, not one-off orders
                             </p>
@@ -146,14 +146,14 @@ export default function Home() {
                 `}>
                     <div
                         key={trackRecords[trackRecord].id}
-                        className="card bg-[#c1f063] border-2 border-[#1e2608] p-6 md:p-12 rounded-2xl text-center md:h-60 w-full"
+                        className="card bg-[#c1f063] p-6 md:p-12 rounded-3xl text-center md:h-60 w-full"
                     >
                         <h3 className="mb-4">{trackRecords[trackRecord].header}</h3>
-                        <p className="mt-2 text-[#29340b]!">{trackRecords[trackRecord].paragraph}</p>
+                        <p className="mt-2 text-[#02261a]!">{trackRecords[trackRecord].paragraph}</p>
                     </div>
                 </div>
                 <Link to="about">
-                    <p className="flex items-center gap-1 mt-8 text-[#1e2608] underline">
+                    <p className="flex items-center gap-1 mt-8 text-white! underline">
                         Meet the leadership
                         <ChevronRight size={17}/>
                     </p>
@@ -179,19 +179,6 @@ export default function Home() {
                 </div>
             </div>
 
-
-
-            <div className="compliance my-16 py-12 px-6 text-center grid place-content-center bg-[#f2f2ed]">
-                <h2>Registred, Cleared, Accountable</h2>
-                <div className="badges text-center mt-8 grid gap-2 [&_.badge]:rounded-2xl [&_.badge]:py-4 [&_.badge]:px-8 place-self-center">
-                    <div className="badge flex gap-2 place-items-cener border-2 bg-[#f8ffe6] text-[#1e2608] relative overflow-clip z-1">
-                        ZRA Tax Clearance Certificate
-                    </div>
-                    <div className="badge flex gap-2 place-items-center border-2 bg-[#f8ffe6] text-[#1e2608] relative overflow-clip z-1">
-                        Certificate of Incorporation
-                    </div>
-                </div>
-            </div>
 
             <div className="in-touch bg-[#02261a] grid place-content-center p-4 py-10 md:p-15 text-center">
                 <div className="m:mx-20 md:m-10 p-10 rounded-3xl grid place-items-center ">

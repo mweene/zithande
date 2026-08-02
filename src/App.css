@@ -1,6 +1,6 @@
 .primary {
-    background-color: #29340b;
-    color: #eef7dc;
+    background-color: #02261a;
+    color: #fff;
 }
 
 .tagline {
@@ -29,6 +29,7 @@ h2 {
 
 p {
     font-size: 1.05rem;
+    color: #02261a;
 }
 
 button {
@@ -238,7 +239,7 @@ nav .menu button {
 
 .four-divisions .cards .card {
     padding: 2rem;
-    background-color: #c1f063;
+    background-color: #02261a;
     border-radius: 1rem;
     border: 2px solid #02261a;
 }

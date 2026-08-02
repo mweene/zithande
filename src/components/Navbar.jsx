@@ -24,7 +24,7 @@ export default function Navbar() {
     }, [isMenuOpen]);
 
     return (
-        <nav className="bg-black/90 border-b border-white/15 fixed w-full z-50">
+        <nav className="bg-[#02261a] border-b-2 border-white/10 fixed w-full z-50">
             <div className="flex place-content-between place-items-center py-3 px-10 backdrop-blur-2xl">
                 <Link to="/">
                     <img src={Logo} alt="logo" className="h-14" />
@@ -33,7 +33,7 @@ export default function Navbar() {
                     className="nav-menu cursor-pointer"
                     onClick={() => setIsMenuOpen((prev) => !prev)}
                 >
-                    <Menu size={25} color="#29340b"/>
+                    <Menu size={25} color="#02261a"/>
                 </button>
             </div>
             {isMenuOpen && (
@@ -65,7 +65,7 @@ const MobileMenu = ({ onClick, isOpen }) => {
                 onClick={onClick}
                 className="self-end cursor-pointer"
             >
-                <X size={30} color="#455714"/>
+                <X size={30} color="#02261a"/>
             </button>
             <ul className="my-8 p-5 px-7 [&_li]:py-2.5">
                 <li>
